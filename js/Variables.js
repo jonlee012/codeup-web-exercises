@@ -1,4 +1,4 @@
-var name = "jon lee", age = 35,
+//var name = "jon lee", age = 35,
 
 // var a = 1;
 // var b = a++;
@@ -9,4 +9,4 @@ var name = "jon lee", age = 35,
 //why is isNaN("")
 //false
 
-var sample = "Hello Codeup";
+//var sample = "Hello Codeup";
