@@ -8,7 +8,12 @@
 false
 true
 
-// string
+// NAN (not a number)
+        //3*t
+//null
+
+
+// string (numbers, letters, symbols wrapped in quotes)
 '0'
 "false"
 'true'
