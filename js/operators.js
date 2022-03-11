@@ -21,6 +21,10 @@
 
     var number2 = 5 * 10;
 
+        // % modulus
+            12 % 5
+            2
+
     //logical operators
 
 
