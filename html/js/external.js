@@ -15,13 +15,13 @@
 // var totalCost = (littleMermaid * 3) + (brotherBear * 3) + (hercules * 3)
 //     alert(totalCost);
 
-var google = prompt("How many hours did you work at Google?")
-var amazon = prompt("How many hours did you work at Amazon?")
-var facebook = prompt("How many hours did you work at Facebook?")
-var gPay = 400
-var aPay = 380
-var fbPay = 350
-    alert("Your pay is $" + ((google * gPay) + (amazon * aPay) + (facebook * fbPay)) + ".");
+// var google = prompt("How many hours did you work at Google?")
+// var amazon = prompt("How many hours did you work at Amazon?")
+// var facebook = prompt("How many hours did you work at Facebook?")
+// var gPay = 400
+// var aPay = 380
+// var fbPay = 350
+//     alert("Your pay is $" + ((google * gPay) + (amazon * aPay) + (facebook * fbPay)) + ".");
 
 // var classFull = prompt("is the class full? (true/false)");
 // var scheduleConflict = prompt("does it conflict with your schedule? (true/false)");
