@@ -89,10 +89,10 @@
 // !!"0"
 //true
 
-var littleMermaid = 3
-var brotherBear = 5
-var hercules = 1
-var pricePerDay = 3
-var willPay = ((littleMermaid * pricePerDay) + (brotherBear * pricePerDay) + (hercules * pricePerDay));
-console.log("total costs will be: $" + willPay +".00");
+// var littleMermaid = 3
+// var brotherBear = 5
+// var hercules = 1
+// var pricePerDay = 3
+// var willPay = ((littleMermaid * pricePerDay) + (brotherBear * pricePerDay) + (hercules * pricePerDay));
+// console.log("total costs will be: $" + willPay +".00");
 
