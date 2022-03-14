@@ -1,29 +1,29 @@
-//OPERATORS
-
-
-   //assignment operators
-    =
-    +=
-    -=
-    *=
-    /=
-    %=
-
-    var number = 10;
-    //number = number + 5;
-    number += 5;
-
-    //arithmetic operators
-    +
-    -
-    *
-    /
-
-    var number2 = 5 * 10;
-
-        // % modulus
-            12 % 5
-            2
+// //OPERATORS
+//
+//
+//    //assignment operators
+//     =
+//     +=
+//     -=
+//     *=
+//     /=
+//     %=
+//
+//     var number = 10;
+//     //number = number + 5;
+//     number += 5;
+//
+//     //arithmetic operators
+//     +
+//     -
+//     *
+//     /
+//
+//     var number2 = 5 * 10;
+//
+//         // % modulus
+//             12 % 5
+//             2
 
     //logical operators
 
