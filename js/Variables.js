@@ -89,5 +89,10 @@
 // !!"0"
 //true
 
-var movies = ["The little mermaid", "Brother Bear", "Hercules"]
-var rentalDays
+var littleMermaid = 3
+var brotherBear = 5
+var hercules = 1
+var pricePerDay = 3
+var willPay = ((littleMermaid * pricePerDay) + (brotherBear * pricePerDay) + (hercules * pricePerDay));
+console.log(willPay);
+
