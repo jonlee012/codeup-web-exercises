@@ -94,5 +94,5 @@ var brotherBear = 5
 var hercules = 1
 var pricePerDay = 3
 var willPay = ((littleMermaid * pricePerDay) + (brotherBear * pricePerDay) + (hercules * pricePerDay));
-console.log(willPay);
+console.log("total costs will be: $" + willPay +".00");
 
