@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 /**
  * TODO:
@@ -8,6 +8,26 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
+//TODO: write a function called sayhello and add param name;
+// 1. write a function (sayhello)
+// 2. add param name
+// 3. call the function
+// 4. create a name1 variable globally
+// 5. pass in name1 as an argument to the function
+// // where do we pass in an argument?
+// // what is the argument?
+// //
+// 6. create a parameter to be used inside of the function
+// // what is a parameter? placeholder for the actual value
+// // where do parameters get created? right after the name of the fn in parantheses
+
+// var name1 = "Codeup!"
+//
+// function sayHello(param) {
+//     // console.log("Hello, " + param);
+//     return "Hello, " + param
+// }
+// console.log("Hello, " + name1)
 
 /**
  * TODO:
@@ -16,6 +36,18 @@
  *
  * console.log 'helloMessage' to check your work
  */
+// 1. write a function (sayhello)
+// 2. pass name as string literal arguemnt
+// 3. store result of function in a variable 'helloMessage'
+// 4. console.log 'helloMessage' to check your work
+
+// var name1 = "Jon"
+// var helloMessage = sayHello(name1)
+// function sayHello(helloMessage) {
+//     return "Hello, " + helloMessage
+//
+// }
+// console.log(helloMessage)
 
 /**
  * TODO:
@@ -24,9 +56,21 @@
  * console.
  */
 
+// 1. write a function ()
+// 2. store name aas a string var myName
+// 3. pass myName to sayHello function
+// 4. console.log 'helloMessage' to check your work
+
+// var myName = "Jon"
+// function sayHello(helloMessage) {
+//     return "Hello, " + helloMessage
+// }
+//
+// console.log(sayHello(myName))
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+// var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -46,6 +90,30 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+//create a function called isTwo
+//takes number as a param
+//return boolean value true if value is 2
+
+// var random = Math.floor((Math.random() * 3) + 1);
+// var isItTwo = isTwo(random);
+// function isTwo(random) {
+//     if (random == 2) {
+//         return true;
+//     }
+//     else {
+//         return false;
+//     }
+// }
+// console.log(random);
+// console.log(isItTwo(3));
+
+// function isTwo(random) {
+//         var (result === 2);
+//         return result
+// }
+// console.log(random);
+// console.log(isTwo(3));
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -58,12 +126,30 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+// var a = "tip";
+// var b = "bill";
+// function calculateTip(a, b) {
+//   return a * b;
+//
+// }
+//
+// console.log(calculateTip(.18, 100));
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+// var a = prompt("what percent tip");
+// var b = prompt("enter your bill total");
+// function calculateTip(a, b) {
+//  return a * b;
+//
+// }
+//
+// console.log(calculateTip(a, b));
 
 /**
  * TODO:
@@ -79,3 +165,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+// var a = "price";
+// var b = "discount";
+function applyDiscount(price, discount) {
+  return price * discount;
+
+}
+console.log(applyDiscount(.2,100));
