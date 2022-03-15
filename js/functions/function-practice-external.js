@@ -159,12 +159,73 @@
 //
 // sumVar(num2);
 
-console.log("A) before printCity gets defined")
-function printCity(location){
-        console.log("B) hey eugene");
-        return location;
-        console.log("C) hey there delilah");
-}
-console.log("D) before printCity gets called");
-printCity("Dallas");
-console.log("E) after printCity gets called");
+// console.log("A) before printCity gets defined")
+// function printCity(location){
+//         console.log("B) hey eugene");
+//         return location;
+//         console.log("C) hey there delilah");
+// }
+// console.log("D) before printCity gets called");
+// printCity("Dallas");
+// console.log("E) after printCity gets called");
+
+
+//functions explained via food
+// function makeCheeseBurger() {
+//         var cheeseBurger;
+//         //code recipe/process
+//         console.log("1. grab ingredients");
+//         cheeseBurger = "tomatoes + lettuce + meat";
+//         console.log('2. put ingredients inside bun');
+//         cheeseBurger = cheeseBurger + " buns";
+//         console.log("3. add cheese");
+//         cheeseBurger = cheeseBurger + " melted cheese";
+//         return(cheeseBurger);
+//
+// }
+//
+// console.log(makeCheeseBurger);
+
+// function gettingDrink(){
+//         var drink;
+//         //code recipe/process
+//         console.log("1. grab cup");
+//         drink = "cup";
+//         console.log('2. put ice inside cup');
+//         drink = cup+ " ice";
+//         console.log("3. add soda");
+//         drink = cup + "  soda";
+//         console.log(drink);
+//         return(drink);
+// }
+// console.log(gettingDrink());
+//
+//
+// function orderFood(){
+//         //invoke other functions in here
+//         makeBurger();
+//         gettingDrink();
+// }
+// orderFood();
+
+// function handleWeather(temp){
+//         return temp;
+// }
+// handleWeather(65);
+
+// function multiplyTwoNums(a, b) {
+//         return a * b;
+// }
+//
+// console.log(multiplyTwoNums(3, 82));
+// console.log(multiplyTwoNums(2, 4));
+//
+// var myFunFunFunction = function sayHello(){
+//         return "hey there";
+// }
+// console.log(myFunFunFunction());
+//
+// function sayHello(){
+//         return "hey im here";
+// }
+// console.log(sayHello());
