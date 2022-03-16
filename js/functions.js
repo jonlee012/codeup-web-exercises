@@ -22,12 +22,18 @@
 // // where do parameters get created? right after the name of the fn in parantheses
 
 // var name1 = "Codeup!"
-//
+
 // function sayHello(param) {
 //     // console.log("Hello, " + param);
 //     return "Hello, " + param
 // }
 // console.log("Hello, " + name1)
+
+//below is correct
+// function sayHello(name) {
+//     return "Hello, " + name
+// }
+// console.log(sayHello("Jon"));
 
 /**
  * TODO:
@@ -94,9 +100,8 @@
 //takes number as a param
 //return boolean value true if value is 2
 
-// var random = Math.floor((Math.random() * 3) + 1);
 // var isItTwo = isTwo(random);
-// function isTwo(random) {
+// function isTwo(num) {
 //     if (random == 2) {
 //         return true;
 //     }
@@ -107,12 +112,14 @@
 // console.log(random);
 // console.log(isItTwo(3));
 
-// function isTwo(random) {
-//         var (result === 2);
-//         return result
+// var random = Math.floor((Math.random() * 3) + 1);
+// function isTwo(num) {
+//         // var (result === 2);
+//         console.log(num);
+//         isTwo(random);
+//         return num === 2;
 // }
 // console.log(random);
-// console.log(isTwo(3));
 
 /**
  * TODO:
@@ -135,6 +142,12 @@
 //
 // console.log(calculateTip(.18, 100));
 
+// function calculateTip(tipPerc, totalBill){
+//     var amountToTip = tipPerc * totalBill;
+//     return amountToTip;
+// }
+//
+// console.log(calculateTip(.2, 100));
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -150,6 +163,15 @@
 // }
 //
 // console.log(calculateTip(a, b));
+
+// var perc = prompt("what percent tip");
+// var total = prompt("enter your bill total");
+//
+// function calculateTip(tipPerc, totalBill) {
+//  return tipPerc * totalBill;
+// }
+//
+// console.log(calculateTip(Number(perc),Number(total)));
 
 /**
  * TODO:
@@ -168,8 +190,11 @@
 
 // var a = "price";
 // var b = "discount";
-function applyDiscount(price, discount) {
-  return price * discount;
+// function applyDiscount(discount, price) {
+//   // var result = ((1 - discount) * price);
+//   // return result;
+//   //or you can omit the var and just do return
+//   return result = ((1 - discount) * price);
+// }
+// console.log(applyDiscount(.2,100));
 
-}
-console.log(applyDiscount(.2,100));
