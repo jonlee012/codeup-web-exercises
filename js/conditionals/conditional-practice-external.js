@@ -310,10 +310,10 @@
 // // var four = .5;
 // // var five = 1;
 // var totalBill = 100
-// function calculateTotal(randomNumber, totalBill) {
-//     return (1 - randomNumber) * totalBill
+// function calculateTotal(x, y) {
+//     return (1 - x) * y
 // }
-// console.log(calculateTotal(randomNumber, totalBill));
+// console.log(calculateTotal(randomNumber, totalBill ));
 
 /**
  * TODO:
@@ -323,50 +323,50 @@
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// // Generate a random number between 0 and 6
+// // // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
 // // var myNumber = luckyNumber
 // console.log(luckyNumber);
 // var totalBill = prompt("how much was your bill?")
-// function calculateTotal(luckyNumber, totalBill){
+// function calculateTotal(x, y){
 //
 //     var discountPrice;
 //     // var priceAfterDiscount = (totalBill - discountPrice);
-//     switch(luckyNumber) {
+//     switch(x) {
 //         case 0:
-//             discountPrice = totalBill;
-//             alert("your lucky number was " + luckyNumber);
-//             alert("your price before discount was " + totalBill);
+//             discountPrice = y;
+//             alert("your lucky number was " + x);
+//             alert("your price before discount was " + y);
 //             alert("your price after discount was " + (discountPrice));
 //             break;
 //         case 1:
-//             discountPrice = (1 - .1) * totalBill;
-//             alert("your lucky number was " + luckyNumber);
-//             alert("your price before discount was " + totalBill);
+//             discountPrice = (1 - .1) * y;
+//             alert("your lucky number was " + x);
+//             alert("your price before discount was " + y);
 //             alert("your price after discount was " + (discountPrice));
 //             break;
 //         case 2:
-//             discountPrice = (1 - .25) * totalBill;
-//             alert("your lucky number was " + luckyNumber);
-//             alert("your price before discount was " + totalBill);
+//             discountPrice = (1 - .25) * y;
+//             alert("your lucky number was " + x);
+//             alert("your price before discount was " + y);
 //             alert("your price after discount was " + (discountPrice));
 //             break;
 //         case 3:
-//             discountPrice = (1 - .35) * totalBill;
-//             alert("your lucky number was " + luckyNumber);
-//             alert("your price before discount was " + totalBill);
+//             discountPrice = (1 - .35) * y;
+//             alert("your lucky number was " + x);
+//             alert("your price before discount was " + y);
 //             alert("your price after discount was " + (discountPrice));
 //             break;
 //         case 4:
-//             discountPrice = (1 - .5) * totalBill;
-//             alert("your lucky number was " + luckyNumber);
-//             alert("your price before discount was " + totalBill);
+//             discountPrice = (1 - .5) * y;
+//             alert("your lucky number was " + x);
+//             alert("your price before discount was " + y);
 //             alert("your price after discount was " + (discountPrice));
 //             break;
 //         case 5:
-//             discountPrice = (1 - 1) * totalBill;
-//             alert("your lucky number was " + luckyNumber);
-//             alert("your price before discount was " + totalBill);
+//             discountPrice = (1 - 1) * y;
+//             alert("your lucky number was " + x);
+//             alert("your price before discount was " + y);
 //             alert("your price after discount is free");
 //             break;
 //         default:
@@ -415,80 +415,42 @@
 //
 // console.log(text);
 
-var confirmUser = confirm("Would you like to enter a number?");
-// var notConUser = (confirmUser !== true)
-if(confirmUser == true) {
-    var userNum = prompt("Enter a number: ");
-    console.log("you have entered: " + userNum);
-    var isNumber = !isNaN(userNum);
-}else if(confirmUser == false){
-    alert("See you next time!")
-}
-console.log(isNumber);
-if (isNumber) {
-    var userNumber = Number(userNum);
-    var isEven = userNumber % 2 === 0;
-    console.log("The user's number is even: " + isEven);
-    var evenAlert = (isEven) ? "Your number is even!" : "Your number is odd!";
-    alert(evenAlert);
-    alert(userNumber + 100);
-    var posNegAlert = (userNumber >= 0) ? "Your number is positive" : "Your number is negative";
-    alert(posNegAlert);
-} else if(isNumber = isNaN(userNum) && confirmUser == true) {
-        alert("Please enter a numerical value")
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // var confirmUser = confirm("Would you like to enter a number?");
-//
-// if(confirmUser) {
-//     // true path, they want to enter a number
-//
-//     var userNum = prompt("Please enter a number: ");
-//
+// // var notConUser = (confirmUser !== true)
+// if(confirmUser == true) {
+//     var userNum = prompt("Enter a number: ");
 //     console.log("you have entered: " + userNum);
-//
-//     //checking to see if the user input is a number; isNaN == true if the value is not a number (like a string) so !isNaN ==> tell us if value is a number
 //     var isNumber = !isNaN(userNum);
-//
-//     if (isNumber) {
-//         //true/happy path ===> user did input a number
-//
-//         //parse the input after confirmed that it is a number so we are working with correct data type
-//         var userNumber = Number(userNum);
-//
-//         //check to see if the number is even
-//         var isEven = userNumber % 2 === 0;
-//         console.log("The user's number is even: " + isEven);
-//
-//         //User ternary statement to determine the message, if even, use even message, if odd, use odd message
-//         var evenAlert = (isEven) ? "Your number is even!" : "Your number is odd!";
-//         alert(evenAlert);
-//
-//         //add an alert 100 to user number
-//         alert(userNumber + 100);
-//
-//         //Use ternary statement to determine positive or negative
-//         var posNegAlert = (userNumber >= 0) ? "Your number is positive" : "Your number is negative";
-//         alert(posNegAlert);
-//
-//     } else {
-//         //sad path ==> not a number
-//         alert("Please enter a numerical value")
-//     }
+// }else if(confirmUser == false){
+//     alert("See you next time!")
 // }
+// console.log(isNumber);
+// if (isNumber) {
+//     var userNumber = Number(userNum);
+//     var isEven = userNumber % 2 === 0;
+//     console.log("The user's number is even: " + isEven);
+//     var evenAlert = (isEven) ? "Your number is even!" : "Your number is odd!";
+//     alert(evenAlert);
+//     alert(userNumber + 100);
+//     var posNegAlert = (userNumber >= 0) ? "Your number is positive" : "Your number is negative";
+//     alert(posNegAlert);
+// } else if(isNumber = isNaN(userNum) && confirmUser == true) {
+//         alert("Please enter a numerical value")
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
