@@ -1,10 +1,10 @@
 
 //number2
-// var i = 2;
-// while(i < 65537) {
-//     console.log(i);
-//     i = i * 2;
-// }
+var i = 2;
+while(i < 65537) {
+    console.log(i);
+    i = i * 2;
+}
 
 // icecream cone
 // This is how you get a random number between 50 and 100
