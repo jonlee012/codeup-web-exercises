@@ -34,10 +34,13 @@
 //     else(window.prompt("Invalid input, please enter a number between 1 and 50 "));
 // }
 // while (i >= minimum && i <= maximum);
-do {
-    var i = prompt("Enter an odd number between 1 and 50.");
-} while (i % 2 === 0 || i < 1 || i > 50 || isNaN(i));
-alert('the number you entered is: ' + i + ' and is valid')
+
+
+// correct number 2
+// do {
+//     var i = prompt("Enter an odd number between 1 and 50.");
+// } while (i % 2 === 0 || i < 1 || i > 50 || isNaN(i));
+// alert('the number you entered is: ' + i + ' and is valid')
 //
 // number 3
 
@@ -52,7 +55,7 @@ alert('the number you entered is: ' + i + ' and is valid')
 //     console.log('Here is an odd number: ' + i);
 // }
 
-///this one works
+/// this one works number 3
 // var i = 0;
 // while (i < 50) {
 //     i++;
