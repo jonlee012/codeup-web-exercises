@@ -1,8 +1,8 @@
 //multiply 7
 
-// for (var i = 1; i <= 10; i++) {
-//     console.log('Show multiplication table 7 * ' + i + ' = '+ (i * 7));
-// }
+for (var a = 1; a <= 10; a++) {
+    console.log('Show multiplication table 7 * ' + a + ' = '+ (a * 7));
+}
 
 //10nums between 2- and 200
 // for (var i = 20; i <= 200; ) {
@@ -17,13 +17,14 @@
 //     console.log('Here is a lovely even number: ' + i);
 // }
 
-//10 random numbers
-for (var i = 1; i <= 10; i++) {
+// //10 random numbers
+// //this one works
+for (var b = 1; b <= 10; b++) {
     var randomNum = Math.floor(Math.random() * 200) + 20;
     if (randomNum % 2 === 0) {
-        console.log(randomNum + 'is even ');
+        console.log(randomNum + ' is even');
     } else {
-        console.log(randomNum + 'is odd');
+        console.log(randomNum + ' is odd');
     }
 }
 
@@ -49,17 +50,22 @@ for (var i = 1; i <= 10; i++) {
 //     console.log(x.repeat(count));
 //     count +=1;
 // }
-for(var i=1; i<=9; i++){
-    var Num='';
-    for(var j=0; j<i; j++){
-        Num += i;
+
+// //this one works
+// //
+for(var c = 1; c < 10; c++){
+    var Num = '';
+    for(var d = 0; d < c; d++){
+        Num += c;
     }
-    console.log(Num) }
+    console.log(Num)
+}
 
-
-//increments of 5
-
-for (i = 100; i >= 0; i-=5) {
-    console.log(i);
+//
+//
+// //increments of 5
+//
+for (e = 100; e >= 0; e-=5) {
+    console.log(e);
 }
 
