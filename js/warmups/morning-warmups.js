@@ -13,3 +13,45 @@ function triangleArea(a, b, c) {
 }
 
 triangleArea(4, 4, 4);
+//
+//
+//
+//
+//
+function reverseString(name) {
+    return name;
+}
+console.log(reverseString("Frank"));;
+
+//
+function reverseString(str) {
+    var newString = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+
+console.log(reverseString('franklin'));;
+// var nameReverse = name.reverse(name);
+// console.log(nameReverse);
+
+
+function palindrome(str) {
+    for (var i = 0; i < str.length / 2; i++) {
+        if (str[i] !== str[str.length - 1 -i]) {
+            return false;
+        }
+    }
+    return true;
+}
+console.log(palindrome("frank"));
+console.log(palindrome("madam"));
+
+
+//
+///
+//
+//
+//
+
