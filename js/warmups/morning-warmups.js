@@ -58,10 +58,13 @@ console.log(palindrome("madam"));
 // Write a function that filters out numbers from a list.
 //     Example input: [3,g,s,5,j,8,2,d,6,h,9,l,5,s,2,3]
 // Expected Output: [a,s,j,d,h,l,s]
-var arr = [3,g,s,5,j,8,2,d,6,h,9,l,5,s,2,3];
-function onlyLetters (){
-    return arr.filter(
-        element => typeof element !== 'number'
-    );
+
+
+var arr = [3,'g','s',5,'j',8,2,'d',6,'h',9,'l',5,'s',2,3];
+var numbersOnly = (val)=> {
+    if(typeof(val) !== 'number'){
+        return val;
+    }
 }
-console.log(onlyLetters)
+var number = arr.filter(numbersOnly);
+console.log(number);
