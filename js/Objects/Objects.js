@@ -150,12 +150,35 @@ console.log(person.lastName)
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
-    function
+    // var shoppers = [
+    //     {name: 'Cameron', amount: 180},
+    //     {name: 'Ryan', amount: 250},
+    //     {name: 'George', amount: 320}
+    // ];
+    // function discountChecker(shoppers) {
+    //     shoppers.forEach(function (shopper) {
+    //         console.log(shopper);
+    //         if (shopper.amount >= 200) {
+    //             //They get the discount.
+    //             var discount = (shopper.amount * 0.12).toFixed(2);
+    //             console.log(shopper.name + " has spent $" + shopper.amount.toFixed(2) + " today. They qualify for a 12% discount of " + discount + ", and therefore have a final total of $" + (shopper.amount - discount) + ".")
+    //         } else {
+    //             console.log(shopper.name + ", thank you for shopping with us today. Your final total today is: $" + shopper.amount.toFixed(2));
+    //         }
+    //         return discountChecker()
+    //     });
+    // }
+    // shoppers.forEach(function (shoppers) {
+    //     if(shoppers.amount > 200){
+    //         var discount = shoppers.amount * .12;
+    //         console.log('Your total before discount is ' + shoppers.amount );
+    //         console.log('Your discount amount ' + discount);
+    //         console.log('Your total after discount ' + (shoppers.amount - discount));
+    //     } else {
+    //         console.log('your total is ' + shoppers.amount );
+    //     }
+    // });
+
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -168,7 +191,16 @@ console.log(person.lastName)
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-
+var books = [
+        {title: 'Rich Dad Poor Dad', author: {firstName: 'Robert', lastName: 'Kiyosaki'}},
+        {title: 'Atomic Habits', author: { firstName: 'James', lastName: 'Clear'}},
+        {title: 'Think and Grow Rich', author: { firstName: 'Napoleon', lastName: 'Hill'}},
+        {title: 'The Subtle Art of Not Giving a Fuck', author: { firstName: 'Mark', lastName: 'Manson'}},
+        {title: 'The Secret', author: { firstName: 'Rhonda', lastName: 'Byrne'}}
+            ];
+    // console.log(books[0].title)
+    // console.log(books[0].author.firstName)
+    // console.log(books[0].author.lastName)
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -176,6 +208,8 @@ console.log(person.lastName)
      * - the book number (use the index of the book in the array)
      * - the book title
      * - author's full name (first name + last name)
+     *
+     *
      *
      * Example Console Output:
      *
@@ -194,6 +228,19 @@ console.log(person.lastName)
      *      ...
      */
 
+    function bookList(myBooks) {
+        for (var i = 0; i < myBooks.length; i++) {
+            var book = myBooks[i];
+            console.log(myBooks[i]);
+            console.log("Book # " + (i + 1));
+            console.log("Title: " + book.title);
+            console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        }
+    }
+    console.log(bookList(books));
+
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -204,6 +251,10 @@ console.log(person.lastName)
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+function createBook(){
+    var addBook = {
 
+    }
+    }
 })();
 
