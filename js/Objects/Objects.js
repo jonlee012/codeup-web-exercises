@@ -132,7 +132,7 @@ console.log(person.lastName)
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
     person.sayHello = function() {
-        return "Hello from " + person.firstName + " " + person.lastName + "!";
+        return "Hello from " + this.firstName + " " + this.lastName + "!";
     }
     console.log(person.sayHello());
 
@@ -150,34 +150,33 @@ console.log(person.lastName)
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
-    // function discountChecker(shoppers) {
-    //     shoppers.forEach(function (shopper) {
-    //         console.log(shopper);
-    //         if (shopper.amount >= 200) {
-    //             //They get the discount.
-    //             var discount = (shopper.amount * 0.12).toFixed(2);
-    //             console.log(shopper.name + " has spent $" + shopper.amount.toFixed(2) + " today. They qualify for a 12% discount of " + discount + ", and therefore have a final total of $" + (shopper.amount - discount) + ".")
-    //         } else {
-    //             console.log(shopper.name + ", thank you for shopping with us today. Your final total today is: $" + shopper.amount.toFixed(2));
-    //         }
-    //         return discountChecker()
-    //     });
-    // }
-    // shoppers.forEach(function (shoppers) {
-    //     if(shoppers.amount > 200){
-    //         var discount = shoppers.amount * .12;
-    //         console.log('Your total before discount is ' + shoppers.amount );
-    //         console.log('Your discount amount ' + discount);
-    //         console.log('Your total after discount ' + (shoppers.amount - discount));
-    //     } else {
-    //         console.log('your total is ' + shoppers.amount );
-    //     }
-    // });
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+    function discountChecker(shoppers) {
+        shoppers.forEach(function (shopper) {
+            console.log(shopper);
+            if (shopper.amount >= 200) {
+                var discount = (shopper.amount * 0.12).toFixed(2);
+                console.log(shopper.name + " has spent $" + shopper.amount.toFixed(2) + " today. They qualify for a 12% discount of " + discount + ", and therefore have a final total of $" + (shopper.amount - discount) + ".")
+            } else {
+                console.log(shopper.name + ", thank you for shopping with us today. Your final total today is: $" + shopper.amount.toFixed(2));
+            }
+            return discountChecker()
+        });
+    }
+    shoppers.forEach(function (shoppers) {
+        if(shoppers.amount > 200){
+            var discount = shoppers.amount * .12;
+            console.log('Your total before discount is ' + shoppers.amount );
+            console.log('Your discount amount ' + discount);
+            console.log('Your total after discount ' + (shoppers.amount - discount));
+        } else {
+            console.log('your total is ' + shoppers.amount );
+        }
+    });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
