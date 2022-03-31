@@ -2,49 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Register With Us</title>
 </head>
 <body>
 <!--info for web browser goes here-->
 <form method="POST" action="https://request-inspector.glitch.me/">
 
-    <label for="username">Username</label>
-    <input id="username" name="username" type="text">
+    <label id="text">Email</label>
+    <input type="email" name="email" placeholder="Enter your email">
     <br>
 
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password">
+    <label id="password">Password</label>
+    <input type="password" name="password" placeholder="Enter your password">
     <br>
+    <button type="submit">Sign in</button>
 
-    <input type="submit">
+    <br>
+    <br>
+    <label id="bio">Bio</label>
+    <br>
+    <textarea name="comment" placeholder="Tell us about yourself"></textarea>
+
+    <br>
+    <br>
 </form>
-
-<form action="https://request-inspector.glitch.me" method="GET">
-    <label for="zipcode">Zipcode</label>
-    <input type="text" name="zipcode" id="zipcode" placeholder="input a zipcode">
-    <br>
-    <button type="submit">Search</button>
-</form>
-<a href="https://request-inspector.glitch.me?zipcode=78205">Search in ZIP Code 78205</a>
+        <legend>How Did You Hear About Us?</legend>
+        <label>
+            <input type="radio" name="question1" value="billboard">Billboard
+        </label>
+        <label>
+            <input type="radio" name="question2" value="radio advertisement">Radio Advertisement
+        </label>
+        <label>
+            <input type="radio" name="question3" value="internet advertisement">Internet Advertisement
+        </label>
+        <label>
+            <input type="radio" name="question4" value="other">Other
+        </label>
 <br>
-<input type="text" name="email" placeholder="Enter your email address">
 <br>
-<input type="password" name="password" placeholder="Enter your password">
-<br>
-<input type="submit">
-<br>
-<textarea name="comment"></textarea>
-
-
 <br>
 
-<select name="coffee_preference">
-    <option value="light">Light Roast</option>
-    <option value="dark">Dark Roast</option>
-    <option value="espresso">Espresso Blend</option>
+<legend>What web browser are you using?</legend>
+<select name="web_preference">
+    <option value="">Select one</option>
+    <option value="google">Google</option>
+    <option value="safari">Safari</option>
+    <option value="bing">Bing</option>
 </select>
+<button type="submit">Submit</button>
+
 <br>
-<input type="submit">
+<br>
+
+
+
+<!--<form action="https://request-inspector.glitch.me" method="GET">-->
+<!--    <label for="zipcode">Zipcode</label>-->
+<!--    <input type="text" name="zipcode" id="zipcode" placeholder="input a zipcode">-->
+<!--    <br>-->
+<!--    <button type="submit">Search</button>-->
+<!--</form>-->
+<!--<a href="https://request-inspector.glitch.me?zipcode=78205">Search in ZIP Code 78205</a>-->
+<!--<br>-->
+<!--<input type="text" name="email" placeholder="Enter your email address">-->
+<!--<br>-->
+<!--<input type="password" name="password" placeholder="Enter your password">-->
+<!--<br>-->
+<!--<input type="submit">-->
+<!--<br>-->
+<!--<textarea name="comment"></textarea>-->
+
+
+<!--<br>-->
+
+
+<!--<br>-->
+<!--<input type="submit">-->
 
 </body>
 </html>
