@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--info for web browser goes here-->
+<form method="POST" action="https://request-inspector.glitch.me/">
+
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text">
+    <br>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+    <br>
+
+    <input type="submit">
+</form>
+
+<form action="https://request-inspector.glitch.me" method="GET">
+    <label for="zipcode">Zipcode</label>
+    <input type="text" name="zipcode" id="zipcode" placeholder="input a zipcode">
+    <br>
+    <button type="submit">Search</button>
+</form>
+<a href="https://request-inspector.glitch.me?zipcode=78205">Search in ZIP Code 78205</a>
+<br>
+<input type="text" name="email" placeholder="Enter your email address">
+<br>
+<input type="password" name="password" placeholder="Enter your password">
+<br>
+<input type="submit">
+<br>
+<textarea name="comment"></textarea>
+
+
+<br>
+
+<select name="coffee_preference">
+    <option value="light">Light Roast</option>
+    <option value="dark">Dark Roast</option>
+    <option value="espresso">Espresso Blend</option>
+</select>
+<br>
+<input type="submit">
+
+</body>
+</html>
