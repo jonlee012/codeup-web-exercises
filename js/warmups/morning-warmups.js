@@ -68,3 +68,31 @@ var numbersOnly = (val)=> {
 }
 var number = arr.filter(numbersOnly);
 console.log(number);
+
+
+
+function readingStat(readings) {
+    var results = [];
+    for (var i = 0; i < readings.length; i++)
+        results.push(readings[i].readingStatus);
+    var library = [
+        {
+            author: 'Bill Gates',
+            title: 'The Road Ahead',
+            readingStatus: true
+        },
+        {
+            author: 'Steve Jobs',
+            title: 'Walter Isaacson',
+            readingStatus: true
+        },
+        {
+            author: 'Suzanne Collins',
+            title: 'Mockingjay: The Final Book of The Hunger Games',
+            readingStatus: false
+        }];
+    return results;
+}
+console.log(library);
+console.log(readingStat());
+
