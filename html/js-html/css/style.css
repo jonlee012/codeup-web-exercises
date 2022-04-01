@@ -1,4 +1,12 @@
 .fancy-header {
-    color: purple;
+    color: darkblue;
     text-decoration: underline;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+#big-font {
+    font-size: x-large;
 }
