@@ -71,12 +71,7 @@ console.log(number);
 
 
 
-function readingStat(readings) {
-    var results = [];
-    for (var i = 0; i < readings.length; i++){
-        results.push(readings[i]);
-    }
-    return results;
+
     var library = [
         {
             author: 'Bill Gates',
@@ -93,6 +88,12 @@ function readingStat(readings) {
             title: 'Mockingjay: The Final Book of The Hunger Games',
             readingStatus: false
         }];
+function readingStat(readings) {
+    var results = [];
+    for (var i = 0; i < readings.length; i++){
+        results.push(readings[i]);
+    }
+    return results;
 }
 console.log(library.readingStatus);
 console.log(readingStat());
