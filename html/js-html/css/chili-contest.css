@@ -1,0 +1,55 @@
+
+.centerText {
+    text-align: center;
+}
+.head {
+    margin: 1em 0 0.5em 0;
+    color: #3e3e3e;
+    font-weight: normal;
+    font-family: 'Ultra', sans-serif;
+    font-size: 75px;
+    line-height: 75px;
+    text-transform: uppercase;
+    text-shadow: 0 2px white, 0 3px #777;
+}
+.fontColor{
+    color: white;
+}
+h1{
+    font-family: "arial";
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+body {
+    background-color: black; /* Tint color */
+    background-blend-mode: multiply;
+    margin: 0;
+    font-family: "Arial Hebrew Scholar";
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 1500px;
+}
+.image-container {
+    width: 100%;
+    height: 0;
+    padding-top: 25%;
+    position: sticky;
+    top: 0;
+    background-size: cover;
+    background-image: url("https://joybauer.com/wp-content/uploads/2016/02/thumb_2139_content_big_wide.jpg");
+}
+hr {
+    position: relative;
+    top: 1px;
+    border: none;
+    height: 2px;
+    background: white;
+    margin-bottom: 50px;
+}
+.background-tint {
+    background-color: rgba(200,100,0,.5); /* Tint color */
+    background-blend-mode: multiply;
+}
