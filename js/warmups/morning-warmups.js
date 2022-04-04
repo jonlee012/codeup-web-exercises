@@ -60,41 +60,67 @@ console.log(palindrome("madam"));
 // Expected Output: [a,s,j,d,h,l,s]
 
 
-var arr = [3,'g','s',5,'j',8,2,'d',6,'h',9,'l',5,'s',2,3];
-var numbersOnly = (val)=> {
-    if(typeof(val) !== 'number'){
-        return val;
+// var arr = [3,'g','s',5,'j',8,2,'d',6,'h',9,'l',5,'s',2,3];
+// var numbersOnly = (val)=> {
+//     if(typeof(val) !== 'number'){
+//         return val;
+//     }
+// }
+// var number = arr.filter(numbersOnly);
+// console.log(number);
+//
+//
+//
+//
+//     var library = [
+//         {
+//             author: 'Bill Gates',
+//             title: 'The Road Ahead',
+//             readingStatus: true
+//         },
+//         {
+//             author: 'Steve Jobs',
+//             title: 'Walter Isaacson',
+//             readingStatus: true
+//         },
+//         {
+//             author: 'Suzanne Collins',
+//             title: 'Mockingjay: The Final Book of The Hunger Games',
+//             readingStatus: false
+//         }];
+// function readingStat(readings) {
+//     var results = [];
+//     for (var i = 0; i < readings.length; i++){
+//         results.push(readings[i]);
+//     }
+//     return results;
+// }
+// console.log(library.readingStatus);
+// console.log(readingStat());
+
+
+// Write a JS code to return an array of only the  Even numbers from the  given array
+// example input: [12,2,3,4,5,6,7,8,9]
+// expected output: [2,2,4,6,8]
+
+// var getEvenNumbers = () => {
+//     var arr = [12,2,3,4,5,6,7,8,9];
+//     var evenNums = arr.filter(number => {
+//         return number % 2 == 0;
+//     });
+//     console.log('Even Numbers: ' + evenNums);
+// }
+//
+// getEvenNumbers();
+
+var array1 = [12,2,3,4,5,6,7,8,9];
+
+var evenNum = [];
+
+array1.forEach(number => {
+    if (number % 2 === 0) {
+        evenNum.push(number);
     }
-}
-var number = arr.filter(numbersOnly);
-console.log(number);
+});
 
-
-
-
-    var library = [
-        {
-            author: 'Bill Gates',
-            title: 'The Road Ahead',
-            readingStatus: true
-        },
-        {
-            author: 'Steve Jobs',
-            title: 'Walter Isaacson',
-            readingStatus: true
-        },
-        {
-            author: 'Suzanne Collins',
-            title: 'Mockingjay: The Final Book of The Hunger Games',
-            readingStatus: false
-        }];
-function readingStat(readings) {
-    var results = [];
-    for (var i = 0; i < readings.length; i++){
-        results.push(readings[i]);
-    }
-    return results;
-}
-console.log(library.readingStatus);
-console.log(readingStat());
-
+console.log(evenNum);
