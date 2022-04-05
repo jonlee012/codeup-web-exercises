@@ -124,3 +124,31 @@ array1.forEach(number => {
 });
 
 console.log(evenNum);
+
+
+// example input: [1,2,3,4,5];
+// expected output: 15
+// some possible test cases to think about:
+//     function should be called ‘sumArr’
+// function should return a number
+// function should accept an array
+// function should return “sum not available” if array is empty
+// function should handle non-numbers
+
+// var sum = [1,2,3,4,5].reduce(sumArray, 0); // with initial value to avoid when the array is empty
+//
+// function sumArray(accumulator, a) {
+//     return accumulator + a;
+// }
+//
+// console.log(sum);
+
+var sumArr = [1,2,3,4,5];
+var sum1 = 0;
+var result;
+for (let i = 0; i < sumArr.length; i++) {
+    result = (sum1 += sumArr[i]);
+}if(sumArr == '0' || sumArr == isNaN(sumArr)){
+    console.log("sum not available");
+}
+console.log(result);
