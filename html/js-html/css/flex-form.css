@@ -56,12 +56,12 @@ body {
 }
 .cover {
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
 }
 .destination {
     /*align-items: flex-end;*/
-    flex-grow: 5;
-    align-items: center;
+    flex-grow: 1;
+    /*align-items: center;*/
     /* TODO:
         Add an explicit size for items along the main axis of 15em.
         Read more about Flex Basis: https://java.codeup.com/appendix/further-reading/html-css/flexbox-additional-concepts/#flex-basis */
