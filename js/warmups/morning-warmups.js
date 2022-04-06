@@ -152,3 +152,17 @@ for (let i = 0; i < sumArr.length; i++) {
     console.log("sum not available");
 }
 console.log(result);
+
+// example input: [5,8,2,6,9,3,2];
+// expected output: [2,2,3,5,6,8,9] // length: 7
+
+// var sortArr = [5,8,2,6,9,3,2];
+// var numOrder = sortArr.slice().sort((a,b)=>a-b)
+// console.log(numOrder)
+
+var sortArr = [5,8,2,6,9,3,2];
+sortArr.sort(function(a, b) {
+    return a - b;
+});
+
+console.log(sortArr);
