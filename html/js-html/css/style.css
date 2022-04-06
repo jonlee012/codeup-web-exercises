@@ -10,3 +10,16 @@
 #big-font {
     font-size: x-large;
 }
+.new-box{
+    width: 100px;
+    height: 100px;
+    border: #3e3e3e solid;
+    padding: 10px;
+    margin: 10px;
+    /*background-color: #3B94D9;*/
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
