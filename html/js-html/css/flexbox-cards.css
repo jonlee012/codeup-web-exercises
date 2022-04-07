@@ -19,7 +19,10 @@ a {
 .container {
     max-width: 750px;
     margin: 0 auto;
+    /**/
+    /**/
     display: flex;
+    align-items: center;
     /* TODO: Make this a flex container and align it's items to the center*/
 }
 
@@ -30,11 +33,12 @@ a {
     border-radius: 4px;
     text-align: center;
     /*flex: auto;*/
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
     /*flex-basis: auto;*/
     /*align-items: center;*/
-    /*justify-content: space-around;*/
+    flex-basis: 100%;
+    /*justify-content: space-evenly;*/
     /*  TODO: Change this flex items basis to 100% of the page  */
 }
 
