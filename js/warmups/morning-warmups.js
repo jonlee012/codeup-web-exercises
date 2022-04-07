@@ -166,3 +166,14 @@ sortArr.sort(function(a, b) {
 });
 
 console.log(sortArr);
+
+
+// example input: [“b”, “a”, “n”, “a”, “n”, “a”];
+// expected output: { b: 1, a: 3, n: 2 }
+var arr = ['b', 'a', 'n', 'a', 'n', 'a'];
+
+const map = arr.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
+
+console.info([...map.keys()]) // to get unique elements
+console.info([...map.values()]) // to get the occurrences
+console.info([...map.entries()]) // to get the pairs [element, frequency]
