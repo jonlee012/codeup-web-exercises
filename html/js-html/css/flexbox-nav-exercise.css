@@ -1,0 +1,57 @@
+body {
+    /*font-family: "Work Sans";*/
+    margin: 0;
+    /*box-sizing: border-box;*/
+}
+nav{
+    background: darkgrey;
+    height: 4.25em;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav-link {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial;
+}
+.nav-link:hover {
+    color: blue;
+}
+.nav-item {
+    display: inline-block;
+    padding: 10px;
+    font-size: .8em;
+}
+.logo {
+    font-size: 1.8em;
+    padding-bottom: .2em;
+    padding-top: .2em;
+    margin: auto;
+
+    /*align-self: center;*/
+    font-family: sans-serif;
+}
+.media-image {
+    width: 10px;
+    padding: 2px;
+    /*display: inline-block;*/
+    margin: 3px;
+    /*float: left;*/
+    /*margin-top: 1.33em;*/
+}
+.follow {
+    font-size: .7em;
+    display: inline-block;
+}
+/*}*/
+.checkout{
+    display: flex;
+    align-content: center;
+    /*padding: 10px;*/
+    /*margin: auto;*/
+    /*float: left;*/
+
+}
