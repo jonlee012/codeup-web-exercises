@@ -45,8 +45,7 @@ function palindrome(str) {
     }
     return true;
 }
-console.log(palindrome("frank"));
-console.log(palindrome("madam"));
+
 
 
 //
