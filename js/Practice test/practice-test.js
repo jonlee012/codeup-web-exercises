@@ -56,17 +56,17 @@ console.log(isOdd(1));
 // 4. Write a function named `oddArr`. Given the array of
 // var arry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] return the odd numbers.
 //
-function oddArr(num) {
-    var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    return num % 2;
-}
+// function oddArr(num) {
+//     var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//     return num % 2;
+// }
 // oddArr.forEach(number => {
 //     if (number % 3 == 0) {
 //         oddNum.push(number);
 //     }
 // });
 
-console.log(num);
+// console.log(num);
 
 
 // 5. Define a function named `creditCard` that takes a credit card number and
@@ -96,7 +96,7 @@ function lowerCase(aa){
         return aa.toLowerCase();
     }
 }
-console.log(aa);
+console.log(lowerCase('A'));
 
 //     function lowerCase(input) {
 //         console.log(typeof input)
@@ -136,6 +136,7 @@ function isAllLowerCase(bb){
     }
 }
 
+console.log(isAllLowerCase('jo'));
 
 
 // function isAllLowerCase(ee){
@@ -162,6 +163,8 @@ function isAllUpperCase(cc){
         return false;
     }
 }
+
+console.log(isAllUpperCase('hi'));
 // Problem 4
 // Define a function named isNotPalindrome that takes in a string and returns true
 // if that string is not palindrome, if the string is palindrome should return false.
@@ -228,7 +231,7 @@ function multiplyBy2(ff) {
     }
 }
 
-console.log(multiplyBy2());
+console.log(multiplyBy2(2));
 
 // function multiplyBy2(ff){
 //     if (isNaN(parseFloat(ff))) {
@@ -264,7 +267,7 @@ function convertHourToSec(gg) {
         return gg * 3600
     }
 }
-console.log(convertHourToSec());
+console.log(convertHourToSec(1));
 
 // Problem 7
 // Write a function named getLowestNumber that takes in 3 arguments. If all 3 inputs are numbers or numeric strings, then return the lowest number.
