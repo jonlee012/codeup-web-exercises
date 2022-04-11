@@ -176,3 +176,25 @@ const map = arr.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map())
 console.info([...map.keys()]) // to get unique elements
 console.info([...map.values()]) // to get the occurrences
 console.info([...map.entries()]) // to get the pairs [element, frequency]
+
+// Write the code necessary to output the first 50 prime numbers
+// Recommend starting your loop at 1 and ending your loop once you've calcualted 50 primes.
+// https://en.wikipedia.org/wiki/Prime_number
+
+var lowerNumber = 1;
+var higherNumber = 50;
+// looping from lowerNumber to higherNumber
+for (var i = lowerNumber; i <= higherNumber; i++) {
+    var flag = 0;
+    // looping through 2 to user input number
+    for (var j = 2; j < i; j++) {
+        if (i % j == 0) {
+            flag = 1;
+            break;
+        }
+    }
+    // if number greater than 1 and not divisible by other numbers
+    if (i > 1 && flag == 0) {
+        console.log(i);
+    }
+}
