@@ -198,3 +198,22 @@ for (var i = lowerNumber; i <= higherNumber; i++) {
         console.log(i);
     }
 }
+
+// Write a function that takes two arrays as arguments
+// Merge both arrays and remove duplicate values
+// Sort the merge result in ascending order
+// Return the resulting array
+
+// example input: [1, 2, 3], [3, 4, 5]
+// expected output:
+//     [ 1, 2, 3, 4, 5 ]
+// var arr1 = [1, 2, 3];
+// var arr2 = [3, 4, 5];
+// var arr3 = arr1.concat(arr2);
+
+// console.log(arr3);
+function combineArrays(x, y){
+    z = x.concat(y)
+    return z;
+}
+console.log(combineArrays([1, 2, 3],[3, 4, 5]));
