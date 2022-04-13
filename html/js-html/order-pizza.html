@@ -79,18 +79,17 @@
 <!--    <div class="card">-->
     <div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Hand Tossed</li>
-            <li class="list-group-item">Garlic seasoned crust with a rich, butter taste.</li>
-            <li>
-                <input type="radio" name="opinions"/>
+            <li class="list-head list-group-item">Hand Tossed</li>
+            <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+
+                <span class="list-border span"><input type="radio" name="opinions"/>
                 <label for="radio-1"></label>
-                <label for="radio-1">Small (10")</label>
-            </li>
-            <li>
-                <input type="radio" name="opinions"/>
+                <label for="radio-1">Small (10")</label></span>
+
+                <span class="span"><input type="radio" name="opinions"/>
                 <label for="radio-2"></label>
-                <label for="radio-2">Medium (12")</label>
-            </li>
+                <label for="radio-2">Medium (12")</label></span>
+
         </ul>
         <div class="card-footer">
 <!--            Card footer-->
@@ -100,18 +99,18 @@
 <!--    <div class="card">-->
     <div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Crispy Thin</li>
+            <li class="list-head list-group-item">Crispy Thin</li>
             <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
-            <li>
+            <span class="list-border span">
                 <input type="radio" name="opinions" id="radio-1" />
                 <label for="radio-1"></label>
                 <label for="radio-1">Medium (12")</label>
-            </li>
-            <li>
+            </span>
+            <span class="span">
                 <input type="radio" name="opinions" id="radio-2" />
                 <label for="radio-2"></label>
                 <label for="radio-2">Large (14")</label>
-            </li>
+            </span>
         </ul>
         <div class="card-footer">
 <!--            Card footer-->
@@ -120,12 +119,124 @@
     <div class="card-body">
         <a href="#" class="btn btn-primary next">Next Step ></a>
     </div>
+    <div class="card">
+        <div class="card-header card-head" >
+            Choose Cheese and Sauce
+        </div>
+        <!--    <div class="card">-->
+        <div>
+            <ul class="list-group list-group-flush">
+                <li class="list-head list-group-item">Cheese</li>
+                <li class="list-group-item" style="border: none">How Much?</li>
+                <div class="form-group custom-select-1">
+                    <select class="custom-select mr-sm-2" id="exampleFormControlSelect1">
+                        <option>Regular</option>
+                        <option>Light</option>
+                        <option>Normal</option>
+                        <option>Extra</option>
+                        <option>Double</option>
+                    </select>
+                </div>
+            </ul>
+            <ul class="list-group list-group-flush">
+                <li class="list-head list-group-item">Sauce</li>
+                <li class="list-group-item" style="border: none">What Type?</li>
+                <div class="form-group custom-select-1">
+                    <select class="custom-select mr-sm-2" id="exampleFormControlSelect1">
+                        <option>Robust Inspired Tomato Sauce</option>
+                        <option>Tomato sauce</option>
+                        <option>Marinara sauce</option>
+                        <option>BBQ Sauce</option>
+                        <option>Alfredo Sauce</option>
+                    </select>
+                </div>
+
+
+            </ul>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" style="border: none">How Much?</li>
+                    <div class="form-group custom-select-1">
+                        <select class="custom-select mr-sm-2" id="exampleFormControlSelect1">
+                         <option>Regular</option>
+                          <option>Light</option>
+                            <option>Normal</option>
+                           <option>Extra</option>
+                     </select>
+                 </div>
+
+            </ul>
+            </div>
+            <div class="card-footer">
+                <!--            Card footer-->
+            </div>
+            <div class="card-body">
+                <a href="#" class="btn btn-primary next">Next Step ></a>
+                <a href="#" class="btn btn-primary next">< Previous Step</a>
+
+            </div>
 </div>
+        <hr>
+        <div class="card">
+            <div class="card-header card-head" >
+                Choose Toppings
+            </div>
+            <!--    <div class="card">-->
+            <div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-head list-group-item">Choose Meats</li>
+                    <span class="span"><input type="checkbox" name="opinions"/>
+                <label for="radio-1"></label>
+                <label for="radio-1">Beef</label></span>
+
+                    <span class="span"><input type="checkbox" name="opinions"/>
+                <label for="radio-2"></label>
+                <label for="radio-2">Ham</label></span>
+                    <span class="span"><input type="checkbox" name="opinions"/>
+                <label for="radio-1"></label>
+                <label for="radio-1">Philly Steak</label></span>
+
+                    <span class="span"><input type="checkbox" name="opinions"/>
+                <label for="radio-2"></label>
+                <label for="radio-2">Bacon</label></span>
+
+                </ul>
+                <div class="card-footer">
+                    <!--            Card footer-->
+                </div>
+            </div>
+            <div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-head list-group-item">Choose Non-Meats</li>
+                    <span class="span"><input type="checkbox" name="opinions"/>
+                <label for="radio-1"></label>
+                <label for="radio-1">Green Peppers</label></span>
+
+                    <span class="span"><input type="checkbox" name="opinions"/>
+                <label for="radio-2"></label>
+                <label for="radio-2">Mushrooms</label></span>
+                    <span class="span"><input type="checkbox" name="opinions"/>
+                <label for="radio-1"></label>
+                <label for="radio-1">Onions</label></span>
+
+                    <span class="span"><input type="checkbox" name="opinions"/>
+                <label for="radio-2"></label>
+                <label for="radio-2">Jalapeno Peppers</label></span>
+
+                </ul>
+                <div class="card-footer">
+                    <!--            Card footer-->
+                </div>
+            </div>
+            <div class="card-body">
+                <button href="#" class="btn btn-primary next fa fa-shopping-cart">Checkout</button>
+            </div>
 </div>
 
 <!-- Main page content -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <!-- Your custom JS goes here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
