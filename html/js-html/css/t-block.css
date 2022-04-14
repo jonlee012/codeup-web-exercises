@@ -1,0 +1,29 @@
+/*.container{*/
+/*    text-align: center;*/
+/*}*/
+/*.center {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-self: center;*/
+/*}*/
+.ul
+{
+    display:flex;
+    justify-content: space-around;
+    list-style:none;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.green{
+    height: 2px;
+    background-color: green;
+    border: none;
+    margin-top: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.title{
+    color: blue;
+    font-size: 1.2em;
+    text-decoration: bold;
+}
