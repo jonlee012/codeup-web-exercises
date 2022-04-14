@@ -217,3 +217,10 @@ function combineArrays(x, y){
     return z;
 }
 console.log(combineArrays([1, 2, 3],[3, 4, 5]));
+
+// Write a function that takes an array of objects as argument
+// Sort the array by property b in ascending order
+// Return the sorted array
+
+// example input: [{a:1,b:2},{a:5,b:4}]
+// expected output: [{a:1,b:2},{a:5,b:4}]
