@@ -231,10 +231,10 @@ console.log(combineArrays([1, 2, 3],[3, 4, 5]));
 //     console.log(i);
 //     i--;
 // }
-var
-    for (var i = 20; i <= 0; i--) {
-        console.log(i);
-    }
+// var
+//     for (var i = 20; i <= 0; i--) {
+//         console.log(i);
+//     }
 
 
 // 2. Write a function that takes an object (a) as argument and returns an array with all object keys
@@ -249,3 +249,64 @@ var keys = {
 };
 
 console.log(Object.keys(keys));
+
+
+
+
+// var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+//
+// for(var i = 0; i < numbers.length; i++) {
+//     if(i % 3 === 0){
+//         console.log(numbers[i]);
+//     }
+// }
+
+// var output = ""
+//
+// for(var i = 0; i <= 15; i++) {
+//     if(i % 3 == 0) {
+//     }
+// }
+// console.log(output)
+
+
+// (hint hint hint: learn how to use a modulus)
+// Write a function that iterates through numbers 1 and 15 and returns the numbers
+// that are divisible by 3 (hint hint hint: learn how to use a modulus)
+for(var i=1;i<=15;i++) {
+    // if iteration number divisible to 3, block works.
+    if(i%3==0)
+    {
+        console.log(i);
+    }
+}
+// 2. Extra Challenging - Set likely won’t be covered but it’s a useful tool in JS
+// Write a function that takes a Set and an array as arguments.
+// If not already existing, add each element in the array to the Set. Return the modified Set
+
+// example input: new Set([1, 2, 3]), [4, 5, 6]
+// expected output: new Set([1, 2, 3, 4, 5, 6 ])
+// -------------------------
+// example input:new Set([1, 2, 3]), [2, 3]
+// expected output: new Set([1, 2, 3])
+//
+// new Set ([1, 2, 3]), [4, 5, 6])
+
+// var trucks = ['🚚', '🚛'];
+
+// Method 1: Concat
+// var val1 = ([1, 2, 3])
+// var val2 = ([4, 5, 6])
+// var combined1 = [].concat(val1, val2);
+// console.log(combined1);
+// // Method 2: Spread
+// var combined2 = [...val1, ...val2];
+// console.log(combined2);
+
+var val1 = ([1, 2, 3])
+var val2 = ([2, 3])
+var combined1 = [].concat(val1, val2);
+console.log(combined1);
+// Method 2: Spread
+var combined2 = [...val1, ...val2];
+console.log(combined2);
