@@ -310,3 +310,28 @@ console.log(combined1);
 // Method 2: Spread
 var combined2 = [...val1, ...val2];
 console.log(combined2);
+
+// 1. list primitive data types in javascript
+// null
+// boolean
+// undefined
+// string(
+// number
+// symbol
+
+// 2. swap keys for values
+// Write a function that takes an object as argument
+// Swap the Javascript object's key with its values and return the resulting object
+
+//     example input: {z:'a',y:'b',x:'c',w:'d'}
+// expected output: {a:'z',b:'y',c:'x',d:'w'}
+// -------------------------
+//     example input:{2:'a',4:'b',6:'c',8:'d'}
+// expected output: {a:'2',b:'4',c:'6',d:'8'}
+
+function swapKeysAndValues(obj) {
+    var swap = Object.entries(obj).map(
+        ([key, value]) => [value, key]);
+    return Object.fromEntries(swap);
+}
+console.log(swapKeysAndValues({z:'a',y:'b',x:'c',w:'d'}));

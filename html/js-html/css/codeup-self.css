@@ -160,39 +160,39 @@ h5{
     font-family: 'Abel', sans-serif;
 
 }
-.parent-card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-/*.pics{*/
+/*.parent-card{*/
 /*    display: flex;*/
 /*    justify-content: center;*/
-/*    align-self: center;*/
+/*    align-items: center;*/
 /*    flex-direction: column;*/
 /*}*/
-.card-footer{
-    padding-left: 0;
-    padding-right: 0;
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-}
-/*.extra-small{*/
-/*padding-bottom: 5em;*/
+/*!*.pics{*!*/
+/*!*    display: flex;*!*/
+/*!*    justify-content: center;*!*/
+/*!*    align-self: center;*!*/
+/*!*    flex-direction: column;*!*/
+/*!*}*!*/
+/*.card-footer{*/
+/*    padding-left: 0;*/
+/*    padding-right: 0;*/
+/*    flex-direction: row;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
 /*}*/
-#apple, #man, #security, #macbook {
+/*!*.extra-small{*!*/
+/*!*padding-bottom: 5em;*!*/
+/*!*}*!*/
+/*#apple, #man, #security, #macbook {*/
 
-    border: solid lightgray 10px;
-    border-radius: 5px;
-    width: 350px;
+/*    border: solid lightgray 10px;*/
+/*    border-radius: 5px;*/
+/*    width: 350px;*/
 
-}
-@media screen and (min-width: 576px) {
-    .container {
-        max-width:540px;
-    }
+/*}*/
+/*@media screen and (min-width: 576px) {*/
+/*    .container {*/
+/*        max-width:540px;*/
+/*    }*/
 
 
-}
+/*}*/
