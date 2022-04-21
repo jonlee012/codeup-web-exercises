@@ -335,3 +335,39 @@ function swapKeysAndValues(obj) {
     return Object.fromEntries(swap);
 }
 console.log(swapKeysAndValues({z:'a',y:'b',x:'c',w:'d'}));
+
+
+// Write a function that takes an array of objects and a string as arguments
+// Add a property with key 'continent' and value equal to the string to each of the objects
+// Return the new array of objects
+// Tipp: try not to mutate the original array
+
+// example input: [{ city: 'Tokyo', country: 'Japan' },
+// { city: 'Bangkok', country: 'Thailand' }], 'Asia'
+// expected output: [{ city: 'Tokyo', country: 'Japan', continent: 'Asia' },
+// { city: 'Bangkok', country: 'Thailand', continent: 'Asia' }]
+var faveCity = {
+    city: 'Tokyo',
+    country: 'Japan',
+};
+console.log(faveCity)
+faveCity.continent = 'Asia';
+console.log(faveCity);
+
+// 2. How can you add “strawberry” to the beggining, middle, and end of the following array?
+// beginning
+var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
+fruits.splice(0, 0, 'strawberries');
+
+console.log(fruits)
+
+//middle
+var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
+fruits.splice(2, 0, 'strawberries');
+
+console.log(fruits)
+//end
+var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
+fruits.splice(6, 0, 'strawberries');
+
+console.log(fruits)
