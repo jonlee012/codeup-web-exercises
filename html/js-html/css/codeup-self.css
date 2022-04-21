@@ -122,8 +122,14 @@ h2{
 p{
     font-size: 28px;
 }
+.p {
+    font-size: 12px;
+    font-family: 'Abel', sans-serif;
+
+}
 h5{
     padding-top: 10px;
+    font-size: 15px ;
 }
 
 .circle{
@@ -147,18 +153,17 @@ h5{
     background-color: #00ABA9;
 }
 .mini-circle{
-    width: 35px;
-    height: 35px;
-    -webkit-border-radius: 18px;
-    -moz-border-radius: 18px;
-    border-radius: 18px;
+    width: 25px;
+    height: 25px;
+    /*-webkit-border-radius: 18px;*/
+    /*-moz-border-radius: 18px;*/
+    border-radius: 15px;
     color: black;
-    font-size: 10px ;
 }
 
 .para{
     font-family: 'Abel', sans-serif;
-    font-size: .7em;
+    font-size: .5em;
 }
 /*.parent-card{*/
 /*    display: flex;*/
