@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<button id="btn1">Click Me!</button>
+<hr>
+<button id="newbtn">Click Me!</button>
+<button id="btn2">Remove Event Listener</button>
+<script>
+
+    // // create a handler function
+    // var listener = function (event) {
+    //     alert('You clicked the button!');
+    // }
+    //
+    // // register the listener to handle clicks on btn1
+    // document.getElementById('btn1').addEventListener('click', listener);
+
+        // 'use strict';
+
+        var listener = function (event) {
+        alert('You clicked the button!');
+    }
+
+        // add event listener to btn1
+        var newbtn = document.getElementById('newbtn');
+        newbtn.addEventListener('click', listener);
+
+        var remover = function (event) {
+        // remove event listener from btn1
+        newbtn.removeEventListener('click', listener);
+        console.log('Event listener removed.');
+    }
+
+        // add event listener to btn2
+        var btn2 = document.getElementById('btn2');
+        btn2.addEventListener('click', remover);
+</script>
+</body>
+</html>
