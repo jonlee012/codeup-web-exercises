@@ -122,7 +122,7 @@ array1.forEach(number => {
     }
 });
 
-console.log(evenNum);
+// console.log(evenNum);
 
 
 // example input: [1,2,3,4,5];
@@ -142,15 +142,15 @@ console.log(evenNum);
 //
 // console.log(sum);
 
-var sumArr = [1,2,3,4,5];
-var sum1 = 0;
-var result;
-for (let i = 0; i < sumArr.length; i++) {
-    result = (sum1 += sumArr[i]);
-}if(sumArr == '0' || sumArr == isNaN(sumArr)){
-    console.log("sum not available");
-}
-console.log(result);
+// var sumArr = [1,2,3,4,5];
+// var sum1 = 0;
+// var result;
+// for (let i = 0; i < sumArr.length; i++) {
+//     result = (sum1 += sumArr[i]);
+// }if(sumArr == '0' || sumArr == isNaN(sumArr)){
+//     console.log("sum not available");
+// }
+// console.log(result);
 
 // example input: [5,8,2,6,9,3,2];
 // expected output: [2,2,3,5,6,8,9] // length: 7
@@ -159,45 +159,45 @@ console.log(result);
 // var numOrder = sortArr.slice().sort((a,b)=>a-b)
 // console.log(numOrder)
 
-var sortArr = [5,8,2,6,9,3,2];
-sortArr.sort(function(a, b) {
-    return a - b;
-});
-
-console.log(sortArr);
+// var sortArr = [5,8,2,6,9,3,2];
+// sortArr.sort(function(a, b) {
+//     return a - b;
+// });
+//
+// console.log(sortArr);
 
 
 // example input: [“b”, “a”, “n”, “a”, “n”, “a”];
 // expected output: { b: 1, a: 3, n: 2 }
-var arr = ['b', 'a', 'n', 'a', 'n', 'a'];
-
-const map = arr.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
-
-console.info([...map.keys()]) // to get unique elements
-console.info([...map.values()]) // to get the occurrences
-console.info([...map.entries()]) // to get the pairs [element, frequency]
+// var arr = ['b', 'a', 'n', 'a', 'n', 'a'];
+//
+// const map = arr.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
+//
+// console.info([...map.keys()]) // to get unique elements
+// console.info([...map.values()]) // to get the occurrences
+// console.info([...map.entries()]) // to get the pairs [element, frequency]
 
 // Write the code necessary to output the first 50 prime numbers
 // Recommend starting your loop at 1 and ending your loop once you've calcualted 50 primes.
 // https://en.wikipedia.org/wiki/Prime_number
 
-var lowerNumber = 1;
-var higherNumber = 50;
-// looping from lowerNumber to higherNumber
-for (var i = lowerNumber; i <= higherNumber; i++) {
-    var flag = 0;
+// var lowerNumber = 1;
+// var higherNumber = 50;
+// // looping from lowerNumber to higherNumber
+// for (var i = lowerNumber; i <= higherNumber; i++) {
+//     var flag = 0;
     // looping through 2 to user input number
-    for (var j = 2; j < i; j++) {
-        if (i % j == 0) {
-            flag = 1;
-            break;
-        }
-    }
+    // for (var j = 2; j < i; j++) {
+    //     if (i % j == 0) {
+    //         flag = 1;
+    //         break;
+    //     }
+    // }
     // if number greater than 1 and not divisible by other numbers
-    if (i > 1 && flag == 0) {
-        console.log(i);
-    }
-}
+//     if (i > 1 && flag == 0) {
+//         console.log(i);
+//     }
+// }
 
 // Write a function that takes two arrays as arguments
 // Merge both arrays and remove duplicate values
@@ -216,7 +216,7 @@ function combineArrays(x, y){
     z = x.concat(y)
     return z;
 }
-console.log(combineArrays([1, 2, 3],[3, 4, 5]));
+// console.log(combineArrays([1, 2, 3],[3, 4, 5]));
 
 // Write a function that takes an array of objects as argument
 // Sort the array by property b in ascending order
@@ -244,11 +244,11 @@ console.log(combineArrays([1, 2, 3],[3, 4, 5]));
 //     example input:{j:9,i:2,x:3,z:4}
 // expected output: ['j','i','x','z']
 
-var keys = {
-    a:1,b:2,c:3
-};
-
-console.log(Object.keys(keys));
+// var keys = {
+//     a:1,b:2,c:3
+// };
+//
+// console.log(Object.keys(keys));
 
 
 
@@ -273,13 +273,13 @@ console.log(Object.keys(keys));
 // (hint hint hint: learn how to use a modulus)
 // Write a function that iterates through numbers 1 and 15 and returns the numbers
 // that are divisible by 3 (hint hint hint: learn how to use a modulus)
-for(var i=1;i<=15;i++) {
-    // if iteration number divisible to 3, block works.
-    if(i%3==0)
-    {
-        console.log(i);
-    }
-}
+// for(var i=1;i<=15;i++) {
+//     // if iteration number divisible to 3, block works.
+//     if(i%3==0)
+//     {
+//         console.log(i);
+//     }
+// }
 // 2. Extra Challenging - Set likely won’t be covered but it’s a useful tool in JS
 // Write a function that takes a Set and an array as arguments.
 // If not already existing, add each element in the array to the Set. Return the modified Set
@@ -303,13 +303,13 @@ for(var i=1;i<=15;i++) {
 // var combined2 = [...val1, ...val2];
 // console.log(combined2);
 
-var val1 = ([1, 2, 3])
-var val2 = ([2, 3])
-var combined1 = [].concat(val1, val2);
-console.log(combined1);
-// Method 2: Spread
-var combined2 = [...val1, ...val2];
-console.log(combined2);
+// var val1 = ([1, 2, 3])
+// var val2 = ([2, 3])
+// var combined1 = [].concat(val1, val2);
+// console.log(combined1);
+// // Method 2: Spread
+// var combined2 = [...val1, ...val2];
+// console.log(combined2);
 
 // 1. list primitive data types in javascript
 // null
@@ -329,13 +329,13 @@ console.log(combined2);
 //     example input:{2:'a',4:'b',6:'c',8:'d'}
 // expected output: {a:'2',b:'4',c:'6',d:'8'}
 
-function swapKeysAndValues(obj) {
-    var swap = Object.entries(obj).map(
-        ([key, value]) => [value, key]);
-    return Object.fromEntries(swap);
-}
-console.log(swapKeysAndValues({z:'a',y:'b',x:'c',w:'d'}));
-
+// function swapKeysAndValues(obj) {
+//     var swap = Object.entries(obj).map(
+//         ([key, value]) => [value, key]);
+//     return Object.fromEntries(swap);
+// }
+// console.log(swapKeysAndValues({z:'a',y:'b',x:'c',w:'d'}));
+//
 
 // Write a function that takes an array of objects and a string as arguments
 // Add a property with key 'continent' and value equal to the string to each of the objects
@@ -346,42 +346,42 @@ console.log(swapKeysAndValues({z:'a',y:'b',x:'c',w:'d'}));
 // { city: 'Bangkok', country: 'Thailand' }], 'Asia'
 // expected output: [{ city: 'Tokyo', country: 'Japan', continent: 'Asia' },
 // { city: 'Bangkok', country: 'Thailand', continent: 'Asia' }]
-var faveCity = [{
-    city: 'Tokyo',
-    country: 'Japan',
-},
-    {
-    city: 'Bangkok',
-    country: 'Thailand',
-    }]
-console.log(faveCity)
-function addCont (obj, str){
-    for(let i = 0; i < obj.length; i++){
-        console.log(obj[i]);
-        obj[i].continent = str;
-        console.log(obj[i]);
-    }
-}
-addCont([{ city: 'Tokyo', country: 'Japan'}, { city: 'Bangkok', country: 'Thailand'}], 'Asia');
+// var faveCity = [{
+//     city: 'Tokyo',
+//     country: 'Japan',
+// },
+//     {
+//     city: 'Bangkok',
+//     country: 'Thailand',
+//     }]
+// console.log(faveCity)
+// function addCont (obj, str){
+//     for(let i = 0; i < obj.length; i++){
+//         console.log(obj[i]);
+//         obj[i].continent = str;
+//         console.log(obj[i]);
+//     }
+// }
+// addCont([{ city: 'Tokyo', country: 'Japan'}, { city: 'Bangkok', country: 'Thailand'}], 'Asia');
 
 
 // 2. How can you add “strawberry” to the beggining, middle, and end of the following array?
 // beginning
-var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
-fruits.splice(0, 0, 'strawberries');
-
-console.log(fruits)
-
-//middle
-var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
-fruits.splice(2, 0, 'strawberries');
-
-console.log(fruits)
-//end
-var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
-fruits.splice(6, 0, 'strawberries');
-
-console.log(fruits)
+// var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
+// fruits.splice(0, 0, 'strawberries');
+//
+// console.log(fruits)
+//
+// //middle
+// var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
+// fruits.splice(2, 0, 'strawberries');
+//
+// console.log(fruits)
+// //end
+// var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
+// fruits.splice(6, 0, 'strawberries');
+//
+// console.log(fruits)
 
 
 
@@ -399,13 +399,30 @@ console.log(fruits)
 // }
 //
 // console.log(yourArray());
-var arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-for( var i = 0; i < arr5.length; i++) {
-
-    arr5.splice(i, 3);
-}
-console.log(arr5);
+// var arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// for( var i = 0; i < arr5.length; i++) {
+//
+//     arr5.splice(i, 3);
+// }
+// console.log(arr5);
 // yourArray([1, 2, 3, 4, 5, 6]);
 // Write an object that describes which brands own which cereals (you can be creative here) . After the object has been declared …
 // A) add properties and values to the existing object
 // B) re-assign 2 properties’ values
+
+console.log(10 % 3);
+
+// for(var i = 0; i > 10; i++) {
+//     console.log(i);
+// }
+for(var i = 0; i <= 10; i++) {
+    console.log(i);
+}
+
+
+var array = ['John', 'Paul', 'George', 'Ringo'];
+// array.splice(array.indexOf('Ringo'), 0, 'Yoko');
+array.push('Yoko');
+
+console.log(array);
+
