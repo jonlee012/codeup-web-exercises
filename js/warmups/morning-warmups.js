@@ -346,13 +346,24 @@ console.log(swapKeysAndValues({z:'a',y:'b',x:'c',w:'d'}));
 // { city: 'Bangkok', country: 'Thailand' }], 'Asia'
 // expected output: [{ city: 'Tokyo', country: 'Japan', continent: 'Asia' },
 // { city: 'Bangkok', country: 'Thailand', continent: 'Asia' }]
-var faveCity = {
+var faveCity = [{
     city: 'Tokyo',
     country: 'Japan',
-};
+},
+    {
+    city: 'Bangkok',
+    country: 'Thailand',
+    }]
 console.log(faveCity)
-faveCity.continent = 'Asia';
-console.log(faveCity);
+function addCont (obj, str){
+    for(let i = 0; i < obj.length; i++){
+        console.log(obj[i]);
+        obj[i].continent = str;
+        console.log(obj[i]);
+    }
+}
+addCont([{ city: 'Tokyo', country: 'Japan'}, { city: 'Bangkok', country: 'Thailand'}], 'Asia');
+
 
 // 2. How can you add “strawberry” to the beggining, middle, and end of the following array?
 // beginning
@@ -371,3 +382,30 @@ var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
 fruits.splice(6, 0, 'strawberries');
 
 console.log(fruits)
+
+
+
+// Write a function that takes an array (a) as argument
+// Extract the first 3 elements of a
+// Return the resulting array
+
+// var arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// function yourArray(arr5){
+// for( var i = 0; i < yourArray.length; i++) {
+//     return
+//         yourArray.splice(i, 3);
+//
+// }
+// }
+//
+// console.log(yourArray());
+var arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+for( var i = 0; i < arr5.length; i++) {
+
+    arr5.splice(i, 3);
+}
+console.log(arr5);
+// yourArray([1, 2, 3, 4, 5, 6]);
+// Write an object that describes which brands own which cereals (you can be creative here) . After the object has been declared …
+// A) add properties and values to the existing object
+// B) re-assign 2 properties’ values
