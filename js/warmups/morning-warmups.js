@@ -410,19 +410,66 @@ function combineArrays(x, y){
 // A) add properties and values to the existing object
 // B) re-assign 2 properties’ values
 
-console.log(10 % 3);
 
 // for(var i = 0; i > 10; i++) {
 //     console.log(i);
 // }
-for(var i = 0; i <= 10; i++) {
-    console.log(i);
+// for(var i = 0; i <= 10; i++) {
+//     console.log(i);
+// }
+//
+//
+// var array = ['John', 'Paul', 'George', 'Ringo'];
+// // array.splice(array.indexOf('Ringo'), 0, 'Yoko');
+// array.push('Yoko');
+//
+// console.log(array);
+
+
+// Write a function that takes an array of numbers as argument and
+// returns the number of negative values in the array
+// example Input: [1,-2,2,-4]
+// expected output: 2
+
+// function numOfNeg (input){
+//     var answer = [];
+//     var negNum = 0;
+//     if(input && input.length){
+//     for(let i = 0; i < input.length; i++){
+//         console.log(input[i]);
+//             if (input[i] < 0){
+//             negNum += 1 }
+//             console.log(input[i]);
+//       }
+//     return answer;
+//     }
+// }
+// numOfNeg(-1, 1, 2, -2, 3);
+
+function countPositivesSumNegatives(input) {
+    const answer = [];
+    let positiveSum = 0;
+    let negativeSum = 0;
+
+    if(input && input.length) {
+        for(let i = 0; i < input.length; i++) {
+            if(input[i] > 0) {
+                positiveSum += 1
+            } else {
+                negativeSum += input[i]
+            }
+        }
+        answer.push(positiveSum);
+        answer.push(negativeSum);
+    }
+    return answer;
+    console.log(answer);
+}
+countPositivesSumNegatives(1, 2, 3, -1, -2, -3);
+console.log(countPositivesSumNegatives());
+
+function makPos(arry) {
+    return arry = arry.map( s => Math.abs(s));
 }
 
-
-var array = ['John', 'Paul', 'George', 'Ringo'];
-// array.splice(array.indexOf('Ringo'), 0, 'Yoko');
-array.push('Yoko');
-
-console.log(array);
-
+console.log(makPos([1, -2, 2, -4]));
