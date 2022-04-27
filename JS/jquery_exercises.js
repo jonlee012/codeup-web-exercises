@@ -17,10 +17,22 @@ $(document).ready(function() {
     $('.welcome').css('text-align', 'center')
     $('.codeUp').css('border', '1px solid red')
     $('li').css('font-size', '20px')
-    $('h1, p, li').css('background-color', 'yellow');
     $('*').css('background-color', '#f0f0f0');
+    $('h1, p.codeUp, li').css('background-color', 'yellow');
 
 
-    var welcome = $('h1').html();
-    alert(welcome);
+    // var welcome = $('h1').html();
+    // alert(welcome);
+    // alert($('h1').html());
+
+    // var ele = document.getElementById('my-element');
+    // ele.addEventListener('click', function(e) {
+    //     alert('My element was clicked!');
+    // });
+    $('#my-element').click( function (){
+        alert('text with id "my-element" was clicked');
+    });
+    $('.important').click( function (){
+        alert('text with class important was clicked');
+    });
 });
