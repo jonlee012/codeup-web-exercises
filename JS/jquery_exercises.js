@@ -35,4 +35,12 @@ $(document).ready(function() {
     $('.important').click( function (){
         alert('text with class important was clicked');
     });
+    $('.not-important').hover(
+        function() {
+            $(this).css('background-color', '#FF0');
+        },
+        function() {
+            $(this).css('background-color', '#FFF');
+        }
+    );
 });
