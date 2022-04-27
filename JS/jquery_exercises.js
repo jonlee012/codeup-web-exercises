@@ -43,4 +43,26 @@ $(document).ready(function() {
             $(this).css('background-color', '#FFF');
         }
     );
+    $('h1').click( function () {
+        $('h1').css('background-color', 'lightgray')
+    });
+    $('p').dblclick( function (){
+        $('p').css('font-size', '18px')
+    });
+    $('li').hover(
+        function() {
+            $('li').css('color', 'red');
+        },
+        function() {
+            $('li').css('color', 'blue');
+        }
+    );
+    $('#textfield').keydown(
+        function() {
+        alert('A key was pushed down!');
+    });
+    $('#textfield1').keyup(function() {
+        alert('a key was released!');
+    });
+
 });
