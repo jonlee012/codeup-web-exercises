@@ -473,3 +473,39 @@ function makPos(arry) {
 }
 
 console.log(makPos([1, -2, 2, -4]));
+
+
+// Write a function that takes two date instances as argument
+// It should return the number of days that lies between those dates
+
+// example input: new Date('2020-06-11'), new Date('2020-06-01')
+// expected output: 10
+
+// function getDate(input1, input2){
+//     var newTime1 = new Date(input1.getTime()
+//     var newTime2 = input2.getTime()
+//     return newTime;
+// }
+//
+// console.log(getDate(new Date(7/ 14 / 2021), new Date(7 / 20 / 2021)));
+
+function parseDate(str) {
+    var mdy = str.split('/');
+    return new Date(mdy[2], mdy[0]-1, mdy[1]);
+}
+
+function datediff(first, second) {
+    // Take the difference between the dates and divide by milliseconds per day.
+    // Round to nearest whole number to deal with DST.
+    return Math.round((second-first)/(1000*60*60*24));
+}
+
+console.log(datediff(parseDate(1/1/2020), parseDate(1/15/2020)));
+
+
+// Write a function that takes an array (a) and a number (b) as arguments
+// Sum up all array elements with a value greater than b
+// Return the sum
+
+// example input: [1, 2, 3, 4, 5, 6, 7], 2
+// expected output: 25
