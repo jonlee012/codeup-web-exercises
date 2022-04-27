@@ -5,7 +5,7 @@ $(document).ready(function() {
     // INSERT JAVASCRIPT CODE SAMPLE HERE
     var contents = $('#codeup').html();
     // alert(contents);
-    $('.important').css('background-color', 'yellow');
+    // $('.important').css('background-color', 'yellow');
     $('p').css('font-size', '14px');
     $('.important, p').css('background-color', '#FF0');
     // $('*').css('border', '1px solid #F00');
@@ -15,6 +15,12 @@ $(document).ready(function() {
     $('.list, a').css('text-align', 'center')
     // $('.list, a').css('justify-content', 'space-between')
     $('.welcome').css('text-align', 'center')
-    var welcome = $('#codeup').html();
+    $('.codeUp').css('border', '1px solid red')
+    $('li').css('font-size', '20px')
+    $('h1, p, li').css('background-color', 'yellow');
+    $('*').css('background-color', '#f0f0f0');
+
+
+    var welcome = $('h1').html();
     alert(welcome);
 });
