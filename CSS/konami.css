@@ -1,0 +1,82 @@
+html{
+    width: 1600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.parentPics{
+    position: relative;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#controller{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    /*z-index: 5;*/
+
+    position: absolute;
+    /*top: 355px;*/
+    left:29%;
+
+}
+body {
+    background-color: black;
+}
+#redDot-up {
+    z-index: 6;
+    position: absolute;
+    top:235px;
+    left:39.70%;
+}
+#redDot-down {
+    z-index: 6;
+    position: absolute;
+    top:295px;
+    left:39.70%;
+}
+#redDot-left {
+    z-index: 6;
+    position: absolute;
+    top:265px;
+    left: 38%;
+}
+#redDot-right {
+    z-index: 6;
+    position: absolute;
+    top:265px;
+    left:41.2%;
+}
+#b-button {
+    z-index: 6;
+    position: absolute;
+    top:285px;
+    left:54.2%;
+}
+#a-button {
+    z-index: 6;
+    position: absolute;
+    top:285px;
+    left:57.4%;
+}
+#start-button {
+    z-index: 6;
+    position: absolute;
+    top:275px;
+    left:48.5%;
+}
+.header {
+    color: red;
+    text-align: center;
+    background-color: lightgrey;
+    font-size: 40px;
+    font-family: 'VT323';
+    letter-spacing: 5px;
+
+}
+/*__________________*/

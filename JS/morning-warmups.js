@@ -509,3 +509,15 @@ console.log(datediff(parseDate(1/1/2020), parseDate(1/15/2020)));
 
 // example input: [1, 2, 3, 4, 5, 6, 7], 2
 // expected output: 25
+
+// // Write a function that takes an array (a) and a value (n) as arguments
+// // Save every nth element in a new array
+// // Return the new array
+//
+// example input: [1,2,3,4,5,6,7,8,9,10],3
+// expected output: [3,6,9]
+
+function nthArray(arr, val){
+
+}
+nthArray([1,2,3,4,5,6,7,8,9,10], 3)
