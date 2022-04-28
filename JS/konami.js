@@ -88,7 +88,7 @@ function success() {
     audio.play();
 
     setTimeout(function(){
-        alert("Success, you entered the Konami Code!");
+        alert("Success, you have add 30 lives!");
     },1000);
     codeIndex = 0;
 }
