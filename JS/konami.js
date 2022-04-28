@@ -25,7 +25,7 @@ $(document).keydown(function(event) {
             codeIndex++
         } else {
             codeIndex = 0;
-            console.log("oops you messed up");
+            alert("not quite");
         }
     } else if (event.which === 40) {
         showImageGeneric('#redDot-down');
@@ -33,7 +33,7 @@ $(document).keydown(function(event) {
             codeIndex++;
         } else {
             codeIndex = 0;
-            console.log("oops you messed up");
+            alert("not quite");
         }
     } else if (event.which === 37) {
         showImageGeneric('#redDot-left');
@@ -41,7 +41,7 @@ $(document).keydown(function(event) {
             codeIndex++;
         } else {
             codeIndex = 0;
-            console.log("oops you messed up");
+            alert("not quite");
         }
     } else if (event.which === 39) {
         showImageGeneric('#redDot-right');
@@ -49,7 +49,7 @@ $(document).keydown(function(event) {
             codeIndex++;
         } else {
             codeIndex = 0;
-            console.log("oops you messed up");
+            alert("not quite");
         }
     } else if (event.which === 66) {
         showImageGeneric('#b-button');
@@ -57,7 +57,7 @@ $(document).keydown(function(event) {
             codeIndex++;
         } else {
             codeIndex = 0;
-            console.log("oops you messed up");
+            alert("not quite");
         }
     } else if (event.which === 65) {
         showImageGeneric('#a-button');
@@ -65,7 +65,7 @@ $(document).keydown(function(event) {
             codeIndex++;
         } else {
             codeIndex = 0;
-            console.log("oops you messed up");
+            alert("not quite");
         }
     } else if (event.which === 13) {
         showImageGeneric('#start-button');
@@ -73,7 +73,7 @@ $(document).keydown(function(event) {
             codeIndex++;
         } else {
             codeIndex = 0;
-            console.log("oops you messed up");
+            alert("not quite");
         }
     }
     //reads this when they completed the konami code
