@@ -24,17 +24,15 @@
 <p class="centered important">This is also very important.</p>
 <a href="#" id="highlight-important">Click to highlight important text.</a>
 
-<script src="/js/jquery.js"></script>
+<script src="../JS/jquery/jquery-2.2.4.js"></script>
 <script>
     "use strict";
 
     $(document).ready(function() {
-        // $('#highlight-important').click(function(event) {
-        //     event.preventDefault();
-        //     $('.important').addClass('highlighted');
-        // });
-        $('#highlight-important').click( function (){
-            alert('text with id "my-element" was clicked');
+        $('#highlight-important').click(function(event) {
+            event.preventDefault();
+            $('.important').addClass('highlighted');
+        });
     });
 </script>
 </body>
