@@ -31,7 +31,8 @@
         ],
         "price": 10
     }
-, {
+,
+    {
     "title": "Nail (box)",
     "quantity": 100,
     "categories": [
