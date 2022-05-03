@@ -108,6 +108,39 @@
 </dl>
 <button class="switch">Click for answers</button>
 <button class="hide">Hide Content</button>
+<section>
+<h3>YOSEMITE</h3>
+<ul class="ul">
+    <li>One of the hottest temperatures on earth was recorded in 1913 in Death Valley National Park, registering 134 degrees.</li>
+    <li>Ribbon Falls in Yosemite is nine times taller than Niagara Falls.</li>
+    <li>Mount McKinley in the Alaska Range of Denali National Park is the highest point in the national parks at 20,302 feet.</li>
+    <li>You can visit two parks in a day if you visit Yellowstone National Park and Grand Teton National Park. They are just 10 miles apart in northern Wyoming.</li>
+</ul>
+<h3>YELLOWSTONE</h3>
+    <ul class="ul">
+    <li>One of the hottest temperatures on earth was recorded in 1913 in Death Valley National Park, registering 134 degrees.</li>
+    <li>Ribbon Falls in Yosemite is nine times taller than Niagara Falls.</li>
+    <li>Mount McKinley in the Alaska Range of Denali National Park is the highest point in the national parks at 20,302 feet.</li>
+    <li>You can visit two parks in a day if you visit Yellowstone National Park and Grand Teton National Park. They are just 10 miles apart in northern Wyoming.</li>
+</ul>
+<h3>GRAND CANYON</h3>
+    <ul class="ul">
+    <li>One of the hottest temperatures on earth was recorded in 1913 in Death Valley National Park, registering 134 degrees.</li>
+    <li>Ribbon Falls in Yosemite is nine times taller than Niagara Falls.</li>
+    <li>Mount McKinley in the Alaska Range of Denali National Park is the highest point in the national parks at 20,302 feet.</li>
+    <li>You can visit two parks in a day if you visit Yellowstone National Park and Grand Teton National Park. They are just 10 miles apart in northern Wyoming.</li>
+</ul>
+</section>
+<button class="clicked">click here to change LI background</button>
+
+<div style="width: 300px; height: 300px; background-color: red; border: 2px solid red" ></div>
+<button class="click">click here to change box background</button>
+
+<div style="width: 300px; height: 300px; background-color: blue; border: 2px solid blue" ></div>
+<button class="click">click here to change box background</button>
+
+<div style="width: 300px; height: 300px; background-color: green; border: 2px solid green" ></div>
+<button class="click">click here to change box background</button>
 
 
 <script
@@ -124,12 +157,30 @@
             $(this).toggleClass('highlighter')
         })
     });
-    $('dt').click(function () {
-        $(this).next().css('font-weight', 'bold');
-    });
+
+
     $('.hide').click(function() {
         $('.hide').parent().hide();
     });
+    $('.clicked').click(function (){
+        $('.ul').each(function (){
+                $(this).children().last().css('background-color', 'yellow');
+        })
+    });
+    $('h3').click(function () {
+        $('.ul').children().css('font-weight', 'bold');
+    });
+    $('li').click(function () {
+        $(this).parent().children('li').first().css('color', 'blue');
+    });
+    $('li').click(function () {
+        $(this).parent().children('li').first().css('color', 'blue');
+    });
+
+
+    $.get('https://pokeapi.co/api/v2/pokemon/charmander').done(function(data) {
+        console.log(data);
+    })
 </script>
 </body>
 </html>
