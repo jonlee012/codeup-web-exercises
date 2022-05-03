@@ -535,3 +535,7 @@ function returnObject (arr, obj) {
     }
 }
 returnObject('a', 1)
+function printResults(arr, obj){
+    console(arr, obj);
+}
+printResults(myarr, myobj);
