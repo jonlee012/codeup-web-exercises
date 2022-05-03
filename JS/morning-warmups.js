@@ -489,18 +489,18 @@ console.log(makPos([1, -2, 2, -4]));
 //
 // console.log(getDate(new Date(7/ 14 / 2021), new Date(7 / 20 / 2021)));
 
-function parseDate(str) {
-    var mdy = str.split('/');
-    return new Date(mdy[2], mdy[0]-1, mdy[1]);
-}
-
-function datediff(first, second) {
-    // Take the difference between the dates and divide by milliseconds per day.
-    // Round to nearest whole number to deal with DST.
-    return Math.round((second-first)/(1000*60*60*24));
-}
-
-console.log(datediff(parseDate(1/1/2020), parseDate(1/15/2020)));
+// function parseDate(str) {
+//     var mdy = str.split('/');
+//     return new Date(mdy[2], mdy[0]-1, mdy[1]);
+// }
+//
+// function datediff(first, second) {
+//     // Take the difference between the dates and divide by milliseconds per day.
+//     // Round to nearest whole number to deal with DST.
+//     return Math.round((second-first)/(1000*60*60*24));
+// }
+//
+// console.log(datediff(parseDate(1/1/2020), parseDate(1/15/2020)));
 
 
 // Write a function that takes an array (a) and a number (b) as arguments
@@ -521,3 +521,17 @@ console.log(datediff(parseDate(1/1/2020), parseDate(1/15/2020)));
 //
 // }
 // nthArray([1,2,3,4,5,6,7,8,9,10], 3)
+
+// // Write a function that takes an object (a) as argument
+// // Return an array with all object keys
+//
+// example input: {a:1,b:2,c:3}
+// expected output: ['a','b','c']
+
+function returnObject (arr, obj) {
+    const iterator = arr.keys();
+    for (const key of iterator) {
+        console.log(key);
+    }
+}
+returnObject('a', 1)
