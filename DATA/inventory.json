@@ -31,4 +31,20 @@
         ],
         "price": 10
     }
+, {
+    "title": "Nail (box)",
+    "quantity": 100,
+    "categories": [
+        "tool"
+    ],
+    "price": 2
+}
+, {
+    "title": "caulking",
+    "quantity": 5,
+    "categories": [
+        "glue"
+    ],
+    "price": 5
+}
 ]
