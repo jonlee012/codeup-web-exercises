@@ -80,23 +80,23 @@
     function addTool(){
         var inventory = $.ajax("../DATA/inventory.json");
         inventory.done(function (data){
-            $.each(data, function (index, tool){
+            $.each(data, function (index, blog){
                 var input = "<div class=\"row\">";
 
                 input += "<div class=\"col\" >";
-                input += tool.title;
+                input += blog.title;
                 input += "</div>";
 
                 input += "<div class=\"col\">";
-                input += tool.quantity;
+                input += blog.quantity;
                 input += "</div>";
 
                 input += "<div class=\"col\">" + "$";
-                input += tool.price;
+                input += blog.price;
                 input += "</div>";
 
                 input += "<div class=\"col\">";
-                input += tool.categories;
+                input += blog.categories;
                 input += "</div>";
 
                 input += "</div>";
