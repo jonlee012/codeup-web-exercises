@@ -112,15 +112,15 @@ function palindrome(str) {
 //
 // getEvenNumbers();
 
-var array1 = [12,2,3,4,5,6,7,8,9];
-
-var evenNum = [];
-
-array1.forEach(number => {
-    if (number % 2 === 0) {
-        evenNum.push(number);
-    }
-});
+// var array1 = [12,2,3,4,5,6,7,8,9];
+//
+// var evenNum = [];
+//
+// array1.forEach(number => {
+//     if (number % 2 === 0) {
+//         evenNum.push(number);
+//     }
+// });
 
 // console.log(evenNum);
 
@@ -212,10 +212,10 @@ array1.forEach(number => {
 // var arr3 = arr1.concat(arr2);
 
 // console.log(arr3);
-function combineArrays(x, y){
-    z = x.concat(y)
-    return z;
-}
+// function combineArrays(x, y){
+//     z = x.concat(y)
+//     return z;
+// }
 // console.log(combineArrays([1, 2, 3],[3, 4, 5]));
 
 // Write a function that takes an array of objects as argument
@@ -446,33 +446,33 @@ function combineArrays(x, y){
 // }
 // numOfNeg(-1, 1, 2, -2, 3);
 
-function countPositivesSumNegatives(input) {
-    const answer = [];
-    let positiveSum = 0;
-    let negativeSum = 0;
-
-    if(input && input.length) {
-        for(let i = 0; i < input.length; i++) {
-            if(input[i] > 0) {
-                positiveSum += 1
-            } else {
-                negativeSum += input[i]
-            }
-        }
-        answer.push(positiveSum);
-        answer.push(negativeSum);
-    }
-    return answer;
-    console.log(answer);
-}
-countPositivesSumNegatives(1, 2, 3, -1, -2, -3);
-console.log(countPositivesSumNegatives());
-
-function makPos(arry) {
-    return arry = arry.map( s => Math.abs(s));
-}
-
-console.log(makPos([1, -2, 2, -4]));
+// function countPositivesSumNegatives(input) {
+//     const answer = [];
+//     let positiveSum = 0;
+//     let negativeSum = 0;
+//
+//     if(input && input.length) {
+//         for(let i = 0; i < input.length; i++) {
+//             if(input[i] > 0) {
+//                 positiveSum += 1
+//             } else {
+//                 negativeSum += input[i]
+//             }
+//         }
+//         answer.push(positiveSum);
+//         answer.push(negativeSum);
+//     }
+//     return answer;
+//     console.log(answer);
+// }
+// countPositivesSumNegatives(1, 2, 3, -1, -2, -3);
+// console.log(countPositivesSumNegatives());
+//
+// function makPos(arry) {
+//     return arry = arry.map( s => Math.abs(s));
+// }
+//
+// console.log(makPos([1, -2, 2, -4]));
 
 
 // Write a function that takes two date instances as argument
@@ -528,14 +528,28 @@ console.log(makPos([1, -2, 2, -4]));
 // example input: {a:1,b:2,c:3}
 // expected output: ['a','b','c']
 
-function returnObject (arr, obj) {
-    const iterator = arr.keys();
-    for (const key of iterator) {
-        console.log(key);
-    }
+// function returnObject (arr, obj) {
+//     const iterator = arr.keys();
+//     for (const key of iterator) {
+//         console.log(key);
+//     }
+// }
+// returnObject('a', 1)
+// function printResults(arr, obj){
+//     console(arr, obj);
+// }
+// printResults(myarr, myobj);
+
+// // Write a function that takes a number (a) as argument
+// // Split a into its individual digits and return them in an array
+// // Tip: you might want to change the type of the number for the splitting
+//
+// example input: 931
+// expected output: [9,3,1]
+
+function splitString (param){
+    var array =  param;
+    return array.split("");
 }
-returnObject('a', 1)
-function printResults(arr, obj){
-    console(arr, obj);
-}
-printResults(myarr, myobj);
+
+console.log(splitString("hello"));
