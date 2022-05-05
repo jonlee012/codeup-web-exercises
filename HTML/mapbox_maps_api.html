@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
 
 
+<div class="container">
 
-    <div class="container" style="border: 2px solid black"><h1>My First Mapbox Map!</h1>
-        <div class="row" style="border: 2px solid red"><div id='map' style='width: 400px; height: 300px;'></div></div>
-        <div class="row" style="border: 2px solid red">Row Two</div>
-        <div class="row" style="border: 2px solid red">Row Three</div>
-    </div>
-
-<button id="zoom1">Zoom in</button>
-<button id="zoom2">Zoom Reg</button>
-<button id="zoom3">Zoom out</button>
+<h1>My First Mapbox Map!</h1>
+<div id='map' style='width: 400px; height: 300px;'></div>
+<button type="button"  id="zoom1">Zoom Out</button>
+<button type="button" id="zoom2">Zoom Reg</button>
+<button type="button" id="zoom3">Zoom In</button>
 </div>
 
 
-
+<script src="../JS/jquery/jquery-2.2.4.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
 <script src="mapbox-geocoder-utils.js"></script>
 <script src="../JS/mapbox-geocoder-utils.js"></script>
