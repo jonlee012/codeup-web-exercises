@@ -17,21 +17,21 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoiam9ubGVlMDEyIiwiYSI6ImNsMnFsYW5kNTAwcWozZnVob
 const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/light-v10', // style URL
-    center: [-96.808891, 32.779167], // starting position [lng, lat]
+    center: [-97.217380, 32.932820], // starting position [lng, lat]
     zoom:5 // starting zoom
 });
-const marker = new mapboxgl.Marker()
-    .setLngLat([13.4050, 51.5200])
-    .addTo(map);
+// const marker = new mapboxgl.Marker()
+//     .setLngLat([13.4050, 51.5200])
+//     .addTo(map);
 
 $('#zoom1').click(function (){
     map.setZoom(5)
 });
 $('#zoom2').click(function (){
-    map.setZoom(10)
+    map.setZoom(15)
 });
 $('#zoom3').click(function (){
-    map.setZoom(15)
+    map.setZoom(20)
 });
 // Generate a map that shows the city with your favorite restaurant using geocoding.
 
@@ -87,7 +87,9 @@ faveRest.forEach(function (element) {
     var popUp = new mapboxgl.Popup()
         .setHTML("<div>"+ element.Name + "</div>" + "<div style='text-align: center'>" + element.Type + "</div>")
         .addTo(map);
-    marker.setPopup(popUp);
+    // $('popUp').click(function(){
+        marker.setPopup(popUp);
+    // });
 });
 
 
