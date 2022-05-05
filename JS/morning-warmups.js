@@ -548,8 +548,8 @@ function palindrome(str) {
 // expected output: [9,3,1]
 
 function splitString (param){
-    var array =  param;
-    return array.split("");
+    // var array = param;
+    return param.split("");
 }
 
 console.log(splitString("hello"));
