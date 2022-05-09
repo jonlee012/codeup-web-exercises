@@ -1,244 +1,134 @@
+"use strict"
 
-//Initialize page with default settings (san antonio)
-initializeMap(-98.48753, 29.42172);
-initializeMarker(-98.48753, 29.42172);
-// updateCityName("San Antonio, Texas, United States");
+// setting up global variables to call the data from Weather Map
+var longitude = -98.7320
+var latitude = 29.7947
 
-var map;
-function initializeMap(long,lat){
-    // Creates weather maps
-    mapboxgl.accessToken = MAPBOX_KEY;
+// Calling initial getData function
+getData();
 
-    map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v9',
-        zoom: 8,
-        center: [long, lat]
+// ------- Query the Weather Map API ----------------------------------------------
+
+// String and Object Method:
+// Using this method for the sake of readability
+// Excluding minutely and hourly.
+// Changing kelvins to imperial: Fahrenheit
+// Defining the 'get' request as a function 'getData' in order to call it multiple times
+function getData() {
+    $.get("https://api.openweathermap.org/data/2.5/onecall", {
+        APPID: OPEN_WEATHER_APPID,
+        lat: latitude,
+        lon: longitude,
+        units: "imperial",
+        exclude: "minutely, hourly"
+    }).done(function (data) {
+        handleResponse(data)
     });
 }
 
-//Default Initial forecast using center location
-updateForecast(29.42172,-98.48753);
+// Setting up handle response to iterate through the returned data and populate the html:
+function handleResponse(data) {
+    let days = data.daily;
+    let html = "";
+    for (var i = 0; i < 5; i++) {
+        let date = dateMaker(i);
+        let iconCode = days[i].weather[0].icon;
+        cardColor(iconCode);
+        let tempHigh = Math.round(days[i].temp.max);
+        let tempLow = Math.round(days[i].temp.min);
+        let description = days[i].weather[0].description;
+// Embedding into the div.card element using string method:
+        let itemHtml = "<div style='align-items: center; margin-bottom: 50px' class='card col-2' style='width: 17rem'>"
+        itemHtml += '<span class="date-text">' + date + '</span>';
+        itemHtml += "<img style='height: 50px; width: 50px;' src='http://openweathermap.org/img/w/" + iconCode + ".png'>" // Refactored the image names of the local icons to work with this
+        itemHtml += '<h5 class="highText">' + 'High ' + tempHigh + '</h5>';
+        itemHtml += '<h5 class="lowText">' + 'Low ' + tempLow + '</h5>';
+        itemHtml += '<p class="card-footer my-1">' + description + '</p>';
+        itemHtml += '</div>';
+        html += itemHtml;
+    }
+    $('#insertWeatherBoxes').html(html);
 
+    //------- Map -----------------------------------------------------
 
-//Creates a draggable marker
-//https://docs.mapbox.com/mapbox-gl-js/example/drag-a-marker/
-function initializeMarker(long, lat){
-    marker = new mapboxgl.Marker({
+    mapboxgl.accessToken = MAPBOX_KEY
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/light-v10', // style URL
+        center: [longitude, latitude], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+
+// Map Nav Controls
+    map.addControl(new mapboxgl.NavigationControl());
+
+//Starting Draggable Marker (default point)
+    var marker = new mapboxgl.Marker({
         draggable: true
     })
-        .setLngLat([long, lat])
+        .setLngLat([longitude, latitude])
         .addTo(map);
-}
 
+// Adding functionality to draggable marker
 
-function updateMarker(long, lat) {
-    // Change the marker location
-    initializeMap(long,lat);
-    initializeMarker(long,lat);
-}
-
-
-//function that using the marker and updates the lat and long
-function onDragEnd() {
-    var lngLat = marker.getLngLat();
-    coordinates.style.display = 'block';
-    coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
-
-    //Call UpdateForcast function and pass it the lat and long(in that order) to update the weather on the cards
-    updateForecast(lngLat.lat,lngLat.lng);
-}
-
-marker.on('dragend', onDragEnd);
-
-
-
-//Create an array of objects that holds the condition and url to the icon
-var weatherIcons = [
-    {
-        condition: "clear-day",
-        url: "./img/clearday.png"
-    },
-    {
-        condition: "clear-night",
-        url: "./img/clearnight.png"
-    },
-    {
-        condition: "rain",
-        url: "./img/rain.png"
-    },
-    {
-        condition: "snow",
-        url: "./img/snow.png"
-    },
-    {
-        condition: "sleet",
-        url: "./img/storm.png"
-    },
-    {
-        condition: "wind",
-        url: "./img/wind.png"
-    },
-    {
-        condition: "fog",
-        url: "./img/fog.png"
-    },
-    {
-        condition: "cloudy",
-        url: "./img/cloudy.png"
-    },
-    {
-        condition: "partly-cloudy-day",
-        url: "./img/partlycloudy.png"
-    },
-    {
-        condition: "partly-cloudy-night",
-        url: "./img/cloudynight.png"
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        longitude = lngLat.lng;
+        latitude = lngLat.lat;
+        getData();
     }
-];
-
-
-//main function to update the forecast
-function updateForecast(lat, long) {
-    console.log(lat);
-    console.log(long);
-
-    //for the loading gif
-    $('#today-iconloading').attr('src', '../img/loader.gif').toggleClass("loading");
-    $('#tommorrow-iconloading').attr('src', '../img/loader.gif').toggleClass("loading");
-    $('#next-iconloading').attr('src', '../img/loader.gif').toggleClass("loading");
-
-
-
-    //For the darksky api to work we need us a proxy server which is the "cors-anywhere.herokuapp" url
-    $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
-        console.log(response);
-        console.log(response.daily.data);
-        console.log(Math.floor(response.daily.data[0].temperatureHigh));
-
-
-        //current day
-        //Current Day Temps
-
-        //math.floor rounds the tempature down
-        // "&#176;" adds the degrees symbol
-        $("#today-temp").html("<h4>" + Math.floor(response.daily.data[0].temperatureHigh) + "&#176;" + "/" + Math.floor(response.daily.data[0].temperatureLow) + "&#176;" + "</h4>");
-
-        //Current Day Icon
-        var todayIconFromDarkSky = response.currently.icon;
-        weatherIcons.forEach(function (weatherIcon) {
-            if (weatherIcon.condition === todayIconFromDarkSky) {
-                $("#today-icon").html('<img id=todayIcon src="' + weatherIcon.url + '" alt="' + weatherIcon.condition + '" >');
-            }
-        });
-
-
-        //Append html with the data from dark sky. For Current Day
-        $("#today-forecast").html(response.currently.summary);
-        $("#today-humidity").html(response.currently.humidity * 100  + " %");
-        $("#today-precipitation").html(response.currently.precipProbability  * 100 + " %");
-        $("#today-winds").html(response.currently.windSpeed + " mph");
-
-//Tomorrow
-        //tomorrow temps
-
-        //math.floor rounds the tempature down
-        // "&#176;" adds the degrees symbol
-        $("#tomorrow-temp").html("<h4>" + Math.floor(response.daily.data[1].temperatureHigh) + "&#176;" + "/" + Math.floor(response.daily.data[1].temperatureLow) + "&#176;" + "</h4>");
-
-        //tomorrow icon
-        var tomorrowIconFromDarkSky = response.daily.data[1].icon;
-        weatherIcons.forEach(function (weatherIcon) {
-            if (weatherIcon.condition === tomorrowIconFromDarkSky) {
-                $("#tomorrow-icon").html('<img id=tomorrowIcon src="' + weatherIcon.url + '" alt="' + weatherIcon.condition + '" >');
-            }
-        });
-
-        //append html with the data from dark sky for tomorrow
-        $("#tomorrow-forecast").html(response.daily.data[1].summary);
-        $("#tomorrow-humidity").html(response.daily.data[1].humidity * 100  + " %");
-        $("#tomorrow-precipitation").html(response.daily.data[1].precipProbability  * 100 + " %");
-        $("#tomorrow-winds").html(response.daily.data[1].windSpeed + " mph");
-    });
-
-
-//next day
-    //Day After Tomorrow
-    $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
-        //next temps
-        //math.floor rounds the tempature down
-        // "&#176;" adds the degrees symbol
-        $("#next-temp").html("<h4>" + Math.floor(response.daily.data[2].temperatureHigh) + "&#176;" + "/" + Math.floor(response.daily.data[2].temperatureLow) + "&#176;" + "</h4>");
-
-        //next day icon
-        var nextIconFromDarkSky = response.daily.data[2].icon;
-        weatherIcons.forEach(function (weatherIcon) {
-            if (weatherIcon.condition === nextIconFromDarkSky) {
-                $("#next-icon").html('<img id=nextIcon src="' + weatherIcon.url + '" alt="' + weatherIcon.condition + '" >');
-            }
-        });
-
-        //append html with the data from dark sky for next day
-        $("#next-forecast").html(response.daily.data[2].summary);
-        $("#next-humidity").html(response.daily.data[2].humidity * 100 + " %");
-        $("#next-precipitation").html(response.daily.data[2].precipProbability  * 100 + " %");
-        $("#next-winds").html(response.daily.data[2].windSpeed + " mph");
-    });
-
+    marker.on('dragend', onDragEnd);
 }
 
-//function that searches what the user is inputting
-$("#search-button").click(function () {
-    var city =  $("#city").val();
-    //call geocode function so that it will update the marker,map,forecast
-    geocode(city);
+// Trying to manipulate the date() object to work with the weather cards.
+// Pass the dateMaker function the index number (i) in the handleResponse.
+// The setDate() method sets the day of the Date object relative
+// to the beginning of the currently set month. -MDN
+// The getDate() method returns the day of the month for the specified
+// date according to local time. -MDN
 
-});
-
-//function to update the city name at the top
-function updateCityName(city){
-    $('#current-city').html("<h2>"+ city + "</h2>");
+function dateMaker(num) {
+    let date = new Date();
+    date.setDate(date.getDate() + num)
+    return date.toDateString().slice(0, 10);
 }
 
+// Change the background of the Weather Cards depending on the iconCode
+function cardColor (code) {
+$('.card').css("background-image", function () {
+        if (code === "01d") {
+            return "linear-gradient(45deg, skyblue, skyblue)";
+        }
+        if (code === "02d" || "03d" || "10d") {
+            return "linear-gradient(45deg, skyblue, grey)";
+        }
+        if (code === "04d" || "09d" || "11d") {
+            return "linear-gradient(45deg, lightgray, darkslategrey)";
+        }
+        if (code === "50d") {
+            return "linear-gradient(45deg, gray, ghostwhite)";
+        }
+        if (code === "13d") {
+            return "linear-gradient(45deg, lightgrey, whitesmoke)";
+        }
+        else {
+            return "linear-gradient(45deg, skyblue, grey)";
+        }
 
-function geocode(search) {
-    var baseUrl = 'https://api.mapbox.com';
-    var endPoint = '/geocoding/v5/mapbox.places/';
-    return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + MAPBOX_KEY)
-        .then(function(res) {
-            return res.json();
-            // to get all the data from the request, comment out the following three lines...
-        }).then(function(data) {
-            //console.log(data.features[0].geometry.coordinates);
-            var coor = data.features[0].geometry.coordinates;
-
-            updateForecast(coor[1],coor[0]);
-            //updates where the marker is
-            updateMarker(coor[0],coor[1]);
-            //updated the citys name
-            updateCityName(data.features[0].place_name)
-
-        });
-
+    }
+)
 }
 
-function reverseGeocode(coordinates) {
-    var baseUrl = 'https://api.mapbox.com';
-    var endPoint = '/geocoding/v5/mapbox.places/';
-    return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + MAPBOX_KEY)
-        .then(function(res) {
-            return res.json();
-        })
-        // to get all the data from the request, comment out the following three lines...
-        .then(function(data) {
-            return data.features[0].place_name;
-        });
-}
+//------- Search by City geocode ----------------------------------------
 
+$(".btn").click(function (e) {
+    e.preventDefault()
+    let searchInput = $("#input").val();
+    geocode(searchInput, MAPBOX_KEY).then(function (data) {
+        // console.log();
+        longitude = data[0];
+        latitude = data[1];
+        getData();
+    })
 
-
-
-
-
-
-
+})
