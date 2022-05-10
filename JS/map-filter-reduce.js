@@ -149,6 +149,16 @@ console.log(longestEmail);
 // Example: Your instructors are: ryan, luis, zach, fernando, justin.
 
 const instructors = users.reduce((total, person) => {
-    return total + person.name +',' ;
+    return total + person.name + ' ' ;
 }, "");
 console.log('Your instructors are: ' ,instructors);
+
+const uniqueLang = users.reduce((languages,user)=>{
+    user.languages.forEach(language=>{
+        if (!languages.includes(language)){
+            languages.push(language);
+        }
+    });
+    return languages
+},[]);
+console.log(uniqueLang);
