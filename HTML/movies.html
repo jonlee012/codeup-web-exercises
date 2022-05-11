@@ -1,10 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link src="https://kit.fontawesome.com/54ed633ccb.js" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/movies.css">
 </head>
 <body>
-$END$
+<div style="background-color: white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item nav1 active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item nav1">
+                    <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item nav1">
+                    <a class="nav-link" href="#">Movie List</a>
+                </li>
+                <li class="nav-item nav1">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+                        <button type="button" class="btn btn-md btn-light btn-outline-secondary">Search Theaters Near You
+                        </button>
+                    </form>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto nav1" style="padding-bottom: 5px">
+                <li style="float: left" class="nav-item">
+                    <button type="button" class="btn btn-md btn-dark btn-secondary">Subscribe!</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="jumbotron backCover">
+    <div class=" jumboText">
+        <h1 class="display-3" style="font-weight: bold"> <br>Movie <br>Club</h1>
+        <p class="lead ml-auto" id="quote"></p>
+    </div>
+</div>
+<div>
+    <h2 class="display-5" style="font-weight: bold; padding-bottom: 5px">Movie List</h2>
+</div>
+<hr>
+<div class="row row-cols-1 row-cols-md-2 mx-5">
+    <div class="col mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center">Titles</h4>
+                <p class="card-text">
+                <div class="table">
+                    <div class="tbody" id="coffees"></div>
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card" style="height:300px;">
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center">Search Movies here</h4>
+                <p class="card-text">
+                    <label for="roast-selection"></label>
+                <form style="margin-bottom:130px;" class="coffeeForm " id="findCoffee">
+                    <div class="mb-3">
+                        <label for="submitType">Choose your flavor</label>
+                        <input class="form-control" id="submitType" onkeyup="updateCoffeesText()"
+                               placeholder="Coffee name"
+                               title="Type in a name" value="">
+                    </div>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="roast-selection">Search by rating</label>
+                            </div>
+                            <select class="custom-select " id="roast-selection" onchange="updateCoffeesText()">
+                                <option value="any">Any</option>
+                                <option value="light">Light</option>
+                                <option value="medium">Medium</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="card" style="height:300px;">
+            <div class="card-body">
+                <h4 style="text-align: center; padding-bottom: 25px" class="card-title">Add Movie here</h4>
+                <p class="card-text">
+                <form class="coffeeForm" id="newCoffee">
+                    <div class="mb-3">
+                        <label for="submitType">Add a new title</label>
+                        <input type="text" class="form-control" id="addCoffee" placeholder="Coffee Name"
+                               title="Add new Coffee">
+                    </div>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="roastSelectionNew">Type of Movie</label>
+                            </div>
+                            <select class="custom-select" id="roastSelectionNew">
+                                <option value="light">Light</option>
+                                <option value="medium">Medium</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="submitCoffee" class="btn btn-secondary btn-block" type="submit">Add title to List
+                    </button>
+                </form>
+                </p>
+            </div>
+        </div>
+        <br>
+<!--        <div class="card" style="height:300px;">-->
+<!--            <div class="card-body">-->
+<!--                <h4 style="text-align: center; padding-bottom: 25px" class="card-title">Choose a size</h4>-->
+<!--                <p class="card-text">-->
+<!--                <div class="checkout form-check">-->
+<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"-->
+<!--                           value="option2">-->
+<!--                    <label class="form-check-label" for="exampleRadios2">-->
+<!--                        Tall $3.25-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--                <div class="checkout form-check">-->
+<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"-->
+<!--                           value="option2">-->
+<!--                    <label class="form-check-label" for="exampleRadios2">-->
+<!--                        Grande $3.99-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--                <div class="checkout form-check" style="padding-bottom: 5px">-->
+<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"-->
+<!--                           value="option2">-->
+<!--                    <label class="form-check-label" for="exampleRadios2">-->
+<!--                        Venti $4.50-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--                <div class="checkout checkBTN form-check">-->
+<!--                    <button style="margin-left: 5px" class="btn btn-secondary checkout btn-block" type="submit">-->
+<!--                        Checkout-->
+<!--                    </button>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <footer style="margin-top: 1em">
+                <p style="text-align: center">(c) 2022 All rights reserved</p>
+                <div id="social-media-links" style="text-align: center; margin-top: -1em; margin-bottom: 5em">
+                    <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://yelp.com"><i class="fab fa-yelp"></i></a>
+                    <a href="https://linked-in.com"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity=git "sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+<script src="../JS/movies.js"></script>
+<script>
+    window.onload = fillCoffeeArray;
+</script>
 </body>
 </html>
+
