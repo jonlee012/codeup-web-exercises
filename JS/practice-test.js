@@ -26,16 +26,19 @@ console.log(calcAge(2));
 // 2. Create a function named `increment` that takes a number as an argument, increments
 // the number by +1 and returns the result. If input is not numeric, increment should return false.
 //
-function increment(bb) {
-    if (typeof(bb) === 'number') {
-        // var addOne = (++bb);
-        var addOne = bb +1;
-    } else {
-        return false
+function increment(arr) {
+    for (i = 0; i < arr.length;  i++){
+        if (typeof(arr[i]) === 'number') {
+            // var addOne = (++bb);
+            var addOne = arr[i] +1;
+        } else {
+            return false
+        }
+        return addOne;
     }
-    return addOne;
-}
-console.log(increment(2));
+    }
+
+console.log(increment([1,2,3,4,5]));
 //
 // function increment(bb){
 
