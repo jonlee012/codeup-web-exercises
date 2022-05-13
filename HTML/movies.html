@@ -1,197 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Movies</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link src="https://kit.fontawesome.com/54ed633ccb.js" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Movie app</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/movies.css">
 </head>
 <body>
-<div style="background-color: white">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item nav1 active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item nav1">
-                    <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item nav1">
-                    <a class="nav-link" href="#">Movie List</a>
-                </li>
-                <li class="nav-item nav1">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
-                        <button type="button" class="btn btn-md btn-light btn-outline-secondary">Search Theaters Near You
-                        </button>
-                    </form>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto nav1" style="padding-bottom: 5px">
-                <li style="float: left" class="nav-item">
-                    <button type="button" class="btn btn-md btn-dark btn-secondary">Subscribe!</button>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
+
 <div class="jumbotron backCover">
     <div class=" jumboText">
-        <h1 class="display-3" style="font-weight: bold"> <br>Movie <br>Club</h1>
+        <h1 class="display-1" style="font-weight: bold; text-align: right">Movie <br>App</h1>
         <p class="lead ml-auto" id="quote"></p>
     </div>
 </div>
-<div>
-    <h2 class="display-5" style="font-weight: bold; padding-bottom: 5px">Movie List</h2>
-</div>
-<hr>
-<div class="row row-cols-1 row-cols-md-2 mx-5">
-    <div class="col mb-4">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title" style="text-align: center">Titles</h4>
-                <p class="card-text">
-                <div class="table">
-                    <div class="tbody" id="coffees"></div>
-                </div>
-                </p>
-            </div>
-        </div>
+<div class="backColor">
+
+    <div class="bean"> <!-- BOTTOM BEAN BORDER -->
+
+
+        <h1 style="text-align: center">Our movie list</h1>
+
+        <!--    </br>-->
+
     </div>
-    <div class="col">
-        <div class="card" style="height:300px;">
-            <div class="card-body">
-                <h4 class="card-title" style="text-align: center">Search Movies here</h4>
-                <p class="card-text">
-                    <label for="roast-selection"></label>
-                <form style="margin-bottom:130px;" class="coffeeForm " id="findCoffee">
-                    <div class="mb-3">
-                        <label for="submitType">Choose your flavor</label>
-                        <input class="form-control" id="submitType" onkeyup="updateCoffeesText()"
-                               placeholder="Coffee name"
-                               title="Type in a name" value="">
-                    </div>
-                    <div class="mb-3">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="roast-selection">Search by rating</label>
-                            </div>
-                            <select class="custom-select " id="roast-selection" onchange="updateCoffeesText()">
-                                <option value="any">Any</option>
-                                <option value="light">Light</option>
-                                <option value="medium">Medium</option>
-                                <option value="dark">Dark</option>
-                            </select>
-                        </div>
-                    </div>
-                </form>
-                </p>
-            </div>
-        </div>
-        <br>
-        <div class="card" style="height:300px;">
-            <div class="card-body">
-                <h4 style="text-align: center; padding-bottom: 25px" class="card-title">Add Movie here</h4>
-                <p class="card-text">
-                <form class="coffeeForm" id="newCoffee">
-                    <div class="mb-3">
-                        <label for="submitType">Add a new title</label>
-                        <input type="text" class="form-control" id="addCoffee" placeholder="Coffee Name"
-                               title="Add new Coffee">
-                    </div>
-                    <div class="mb-3">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="roastSelectionNew">Type of Movie</label>
-                            </div>
-                            <select class="custom-select" id="roastSelectionNew">
-                                <option value="light">Light</option>
-                                <option value="medium">Medium</option>
-                                <option value="dark">Dark</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button id="submitCoffee" class="btn btn-secondary btn-block" type="submit">Add title to List
-                    </button>
-                </form>
-                </p>
-            </div>
-        </div>
-        <br>
-<!--        <div class="card" style="height:300px;">-->
-<!--            <div class="card-body">-->
-<!--                <h4 style="text-align: center; padding-bottom: 25px" class="card-title">Choose a size</h4>-->
-<!--                <p class="card-text">-->
-<!--                <div class="checkout form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"-->
-<!--                           value="option2">-->
-<!--                    <label class="form-check-label" for="exampleRadios2">-->
-<!--                        Tall $3.25-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--                <div class="checkout form-check">-->
-<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"-->
-<!--                           value="option2">-->
-<!--                    <label class="form-check-label" for="exampleRadios2">-->
-<!--                        Grande $3.99-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--                <div class="checkout form-check" style="padding-bottom: 5px">-->
-<!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"-->
-<!--                           value="option2">-->
-<!--                    <label class="form-check-label" for="exampleRadios2">-->
-<!--                        Venti $4.50-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--                <div class="checkout checkBTN form-check">-->
-<!--                    <button style="margin-left: 5px" class="btn btn-secondary checkout btn-block" type="submit">-->
-<!--                        Checkout-->
-<!--                    </button>-->
-<!--                    </form>-->
-<!--                </div>-->
-<!--                </p>-->
-<!--            </div>-->
-<!--        </div>-->
+
+    <div class="controls">
+        <div id="reload" type="button"></div>
     </div>
-</div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <footer style="margin-top: 1em">
-                <p style="text-align: center">(c) 2022 All rights reserved</p>
-                <div id="social-media-links" style="text-align: center; margin-top: -1em; margin-bottom: 5em">
-                    <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-                    <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
-                    <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
-                    <a href="https://yelp.com"><i class="fab fa-yelp"></i></a>
-                    <a href="https://linked-in.com"><i class="fab fa-linkedin"></i></a>
+
+
+<!--    <div class="spinner-wrapper">-->
+<!--        <div class="spinner"></div>-->
+<!--    </div>-->
+
+    <!--<div class="main-content">-->
+    <!--    <div class="container">-->
+    <!--        <div class="row">-->
+    <div id="movies"></div>
+
+    <!--                <button id="post-id">Post Movie</button>-->
+    <div class="container">
+        <div class="row">
+            <div class="col" style="outline: auto">
+                <div id="newMovie">
+                    <h1 style="text-align: center">Add a movie to the list</h1>
+                    <div>
+                        <!--                    <label>Title </label>-->
+                        <input placeholder="Add title here" type="text" id="title">
+                    </div>
+                    <div>
+                        <!--                        <label>Genre </label>-->
+                        <input placeholder="Add genre here" type="text" id="genre">
+                    </div>
+                    <div>
+                        <!--                        <label>Rating </label>-->
+                        <input placeholder="Add rating (1 Low-5 High)" type="text" id="rating">
+                    </div>
+                    <div>
+                        <!--                        <label>Director </label>-->
+                        <input placeholder="Add director here" type="text" id="director">
+                    </div>
+                    <!--                    <label>Genre </label>-->
+                    <!--                    <input type="text" id="genre">-->
+
+                    <!--                    <label>Rating </label>-->
+                    <!--                    <input type="text" id="rating">-->
+
+                    <!--                    <label>Director </label>-->
+                    <!--                    <input type="text" id="director">-->
+                    <!--                    <div class="textBox">-->
+                    <!--                        &lt;!&ndash;                        <label>Director </label>&ndash;&gt;-->
+                    <!--                        <input rows="4" placeholder="Add Plot Here" type="text" id="plot">-->
+                    <!--                    </div>-->
+                    <div class="textBox">
+                        <!--                        <label>Plot </label>-->
+                        <textarea id="plot" rows="4" placeholder="Add Plot Here"></textarea>
+                    </div>
+                    <!--                    <label>poster </label>-->
+                    <input placeholder="Add a image URL" type="text" id="addImg">
+                    <div>
+                        <button id="add">Add Movie</button>
+                    </div>
                 </div>
-            </footer>
+            </div>
+            <div class="col" style="outline: auto"">
+            <!--            <button id="post-id">Post Movie</button>-->
+            <div id="editMovie">
+                <h1 style="text-align: center">Edit a movie</h1>
+                <div>
+                    <!--                    <label>Current Title </label>-->
+                    <input placeholder="Enter the current title" type="text" id="oldTitle">
+                </div>
+                <div>
+                    <!--                    <label>Update Title </label>-->
+                    <input placeholder="Enter the new title" type="text" id="editTitle">
+                </div>
+                <div>
+                    <!--                    <label>Genre </label>-->
+                    <input placeholder="Enter the genre here" type="text" id="editGenre">
+                </div>
+                <div>
+                    <!--                    <label>Rating </label>-->
+                    <input placeholder="Enter the rating here" type="text" id="editRating">
+                </div>
+                <div>
+                    <!--                    <label>Director </label>-->
+                    <input placeholder="Enter the director here" type="text" id="editDirector">
+                </div>
+                <div class="textBox">
+                    <!--                        <label>Plot </label>-->
+                    <textarea id="editPlot" rows="5"></textarea>
+                </div>
+                <!--                    <label>poster </label>-->
+                <input placeholder="Update image URL" type="text" id="editImg">
+                <div><button id="edit">Edit Movie</button></div>
+
+            </div>
         </div>
     </div>
 </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity=git "sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
-<script src="../JS/movies.js"></script>
+` `
+
+<!--        <form class="col-6">-->
+<!--            <h1>Add a Movie:</h1>-->
+<!--            <label for="new-rating-selection">Movie Rating:</label>-->
+<!--            <select id="new-rating-selection">-->
+<!--                <option>1</option>-->
+<!--                <option>2</option>-->
+<!--                <option>3</option>-->
+<!--                <option>4</option>-->
+<!--                <option>5</option>-->
+<!--            </select>-->
+<!--            <br>-->
+<!--            <label for="new-title-selection">Movie Title:</label>-->
+<!--            <input id="new-title-selection" name="new-title-selection" type="text">-->
+<!--            <button>Submit Movie Title & Rating</button>-->
+<!--        </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--scripts-->
 <script>
-    window.onload = fillCoffeeArray;
+    let spinnerWrapper = document.querySelector('.spinner-wrapper');
+    window.addEventListener('load', function () {
+        // spinnerWrapper.style.display = 'none';
+        spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+    });
 </script>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<!--<script src="server.js"></script>-->
+
+<script src="../JS/movies.js"></script>
 </body>
 </html>
-
