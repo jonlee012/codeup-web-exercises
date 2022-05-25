@@ -181,7 +181,7 @@ function isNotPalindrome(dd) {
     return true;
 }
 
-
+//
 // function isNotPalindrome(str) {
 //     if ()
 //     return true;
@@ -561,11 +561,11 @@ function getInitials(first, last) {
 
 console.log(getInitials('jon', 'lee'));
 
-// function convertNameToObject(string){
-//     var newStr = "";
-//     for (let i = 0; i < string.length; i++){
-//         newStr = JSON.parse(string[i]) + JSON.parse(string[i]);
-//     }
-//     return newStr
-// }
-// console.log(convertNameToObject('hello world'));
+function convertNameToObject(string){
+    var newStr = "";
+    for (let i = 0; i < string.length; i++){
+        newStr = JSON.parse(string[i]) + JSON.parse(string[i]);
+    }
+    return newStr
+}
+console.log(convertNameToObject('hello world'));
