@@ -610,3 +610,29 @@ function fizzBuzz(){
 }
 
 console.log(fizzBuzz());
+
+
+// You bought a few bunches of fruit over the weekend.
+// Create a function that splits a bunch into singular
+// objects inside an array.
+
+
+let bunch = [{fruit: "apple" , quantity: 1},{fruit: "banana" , quantity: 3}]
+let res = bunch.reduce((acc,curr)=>{
+    if(curr.quantity > 1 && curr.fruit==='banana'){
+        var arr = []
+        for(let i=0; i < curr.quantity ; i++){
+            var fr = {}
+            fr.fruit = 'banana';
+            fr.quantity = 1;
+            arr.push(fr)
+        }
+        acc.push(...arr)
+    }
+    else{
+        acc.push(curr)
+    }
+    return acc
+},[])
+
+console.log(res)
